@@ -18,10 +18,11 @@ class InternIssue(
     id: String,
     currentStatus: IssueStatus? = null,
     createDate: LocalDate? = null,
+    extraCost: String? = null,
 
     @OneToMany(mappedBy = "jiraIssue", cascade = [CascadeType.ALL], orphanRemoval = true)
     val statusChanges: List<StatusChange> = mutableListOf(),
 
     @OneToOne(mappedBy = "jiraIssue", cascade = [CascadeType.ALL], orphanRemoval = true)
     val applicantName: ApplicantName? = null
-) : JiraIssue(id, currentStatus, createDate)
+) : JiraIssue(id, currentStatus, createDate, extraCost)
