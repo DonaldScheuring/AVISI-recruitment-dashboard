@@ -1,0 +1,3479 @@
+{
+    "expand": "schema,names",
+    "startAt": 0,
+    "maxResults": 100,
+    "total": 11,
+    "issues": [
+        {
+            "expand": "operations,customfield_10090.properties,versionedRepresentations,editmeta,changelog,customfield_10010.requestTypePractice,customfield_10278.properties,renderedFields,customfield_10089.properties",
+            "id": "84931",
+            "self": "https://avisi.atlassian.net/rest/api/3/issue/84931",
+            "key": "KRR-12",
+            "changelog": {
+                "startAt": 0,
+                "maxResults": 3,
+                "total": 3,
+                "histories": [
+                    {
+                        "id": "1014923",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T11:00:31.388+0100",
+                        "items": [
+                            {
+                                "field": "labels",
+                                "fieldtype": "jira",
+                                "fieldId": "labels",
+                                "from": "no_value",
+                                "fromString": "Medewerker",
+                                "to": "no_value",
+                                "toString": "AVG3 Medewerker"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014920",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T11:00:13.647+0100",
+                        "items": [
+                            {
+                                "field": "status",
+                                "fieldtype": "jira",
+                                "fieldId": "status",
+                                "from": "1",
+                                "fromString": "Open",
+                                "to": "10115",
+                                "toString": "Closed - Niet op gesprek"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014914",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T11:00:02.249+0100",
+                        "items": [
+                            {
+                                "field": "Link",
+                                "fieldtype": "jira",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "KRR-1",
+                                "toString": "This issue adresses KRR-1"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "fields": {
+                "lastViewed": "2024-03-12T14:42:22.350+0100",
+                "labels": [
+                    "AVG3",
+                    "Medewerker"
+                ],
+                "issuelinks": [
+                    {
+                        "id": "47903",
+                        "self": "https://avisi.atlassian.net/rest/api/3/issueLink/47903",
+                        "type": {
+                            "id": "10009",
+                            "name": "Adressed",
+                            "inward": "is adressed by",
+                            "outward": "adresses",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issueLinkType/10009"
+                        },
+                        "outwardIssue": {
+                            "id": "84907",
+                            "key": "KRR-1",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issue/84907",
+                            "fields": {
+                                "summary": "Vacature HR Medewerker ",
+                                "status": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/status/10111",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/generic.png",
+                                    "name": "Vac Open",
+                                    "id": "10111",
+                                    "statusCategory": {
+                                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/4",
+                                        "id": 4,
+                                        "key": "indeterminate",
+                                        "colorName": "yellow",
+                                        "name": "In Progress"
+                                    }
+                                },
+                                "priority": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                                    "name": "Low",
+                                    "id": "4"
+                                },
+                                "issuetype": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10080",
+                                    "id": "10080",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                                    "name": "Job (Regular)",
+                                    "subtask": false,
+                                    "avatarId": 10300,
+                                    "hierarchyLevel": 0
+                                }
+                            }
+                        }
+                    }
+                ],
+                "assignee": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=712020%3A31379a8c-de27-40a9-a075-dba33dd9c147",
+                    "accountId": "712020:31379a8c-de27-40a9-a075-dba33dd9c147",
+                    "emailAddress": "bob.bouman@bouman.nl",
+                    "displayName": "Bob Bouman",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "components": [],
+                "subtasks": [],
+                "reporter": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                    "accountId": "62cfce93c4c3be001fb586c5",
+                    "emailAddress": "irene.irenema@irenema.nl",
+                    "displayName": "Irene Irenema",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "progress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "votes": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issue/KRR-12/votes",
+                    "votes": 0,
+                    "hasVoted": false
+                },
+                "issuetype": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10079",
+                    "id": "10079",
+                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                    "name": "Recruit",
+                    "subtask": false,
+                    "avatarId": 10300,
+                    "hierarchyLevel": 0
+                },
+                "customfield_10031": [],
+                "project": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/project/10301",
+                    "id": "10301",
+                    "key": "KRR",
+                    "name": "Kopie Recruit RU",
+                    "projectTypeKey": "business",
+                    "simplified": false
+                },
+                "customfield_10276": "",
+                "customfield_10277": 0,
+                "watches": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issue/KRR-12/watchers",
+                    "watchCount": 1,
+                    "isWatching": false
+                },
+                "customfield_10018": {
+                    "hasEpicLinkFieldDependency": false,
+                    "showField": false,
+                    "nonEditableReason": {
+                        "reason": "EPIC_LINK_SHOULD_BE_USED",
+                        "message": "To set an epic as the parent, use the epic link instead"
+                    }
+                },
+                "customfield_10019": "0|x0d1og:",
+                "updated": "2024-03-06T11:00:31.382+0100",
+                "customfield_10133": "Henry@hagen.nl",
+                "customfield_10134": "0612345678",
+                "customfield_10247": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10578",
+                    "value": "Non-technische functie",
+                    "id": "10578"
+                },
+                "summary": "Henry Hagen ",
+                "customfield_10115": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10133",
+                    "value": "15",
+                    "id": "10133"
+                },
+                "customfield_10116": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10143",
+                    "value": "Hardware",
+                    "id": "10143",
+                    "child": {
+                        "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10145",
+                        "value": "Peripheral",
+                        "id": "10145"
+                    }
+                },
+                "customfield_10117": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10152",
+                    "value": "Incident",
+                    "id": "10152"
+                },
+                "duedate": "no_value",
+                "statuscategorychangedate": "2024-03-06T11:00:13.611+0100",
+                "fixVersions": [],
+                "customfield_10114": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10130",
+                    "value": "ja",
+                    "id": "10130"
+                },
+                "priority": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                    "name": "Low",
+                    "id": "4"
+                },
+                "versions": [],
+                "status": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/status/10115",
+                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Closed - Niet op gesprek",
+                    "id": "10115",
+                    "statusCategory": {
+                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/3",
+                        "id": 3,
+                        "key": "done",
+                        "colorName": "green",
+                        "name": "Done"
+                    }
+                },
+                "creator": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                    "accountId": "62cfce93c4c3be001fb586c5",
+                    "emailAddress": "irene.irenema@irenema.nl",
+                    "displayName": "Irene Irenema",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "aggregateprogress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "customfield_10305": "HR Medewerker",
+                "workratio": -1,
+                "created": "2024-03-06T11:00:02.218+0100",
+                "customfield_10092": [],
+                "security": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/securitylevel/10019",
+                    "id": "10019",
+                    "description": "(Migrated on 4 May 2023 22:26 UTC)",
+                    "name": "Default"
+                }
+            }
+        },
+        {
+            "expand": "operations,customfield_10090.properties,versionedRepresentations,editmeta,changelog,customfield_10010.requestTypePractice,customfield_10278.properties,renderedFields,customfield_10089.properties",
+            "id": "84928",
+            "self": "https://avisi.atlassian.net/rest/api/3/issue/84928",
+            "key": "KRR-10",
+            "changelog": {
+                "startAt": 0,
+                "maxResults": 1,
+                "total": 1,
+                "histories": [
+                    {
+                        "id": "1014895",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:55:59.971+0100",
+                        "items": [
+                            {
+                                "field": "Link",
+                                "fieldtype": "jira",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "KRR-9",
+                                "toString": "This issue is adressed by KRR-9"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "fields": {
+                "lastViewed": "2024-03-12T14:42:38.033+0100",
+                "labels": [],
+                "issuelinks": [
+                    {
+                        "id": "47898",
+                        "self": "https://avisi.atlassian.net/rest/api/3/issueLink/47898",
+                        "type": {
+                            "id": "10009",
+                            "name": "Adressed",
+                            "inward": "is adressed by",
+                            "outward": "adresses",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issueLinkType/10009"
+                        },
+                        "inwardIssue": {
+                            "id": "84927",
+                            "key": "KRR-9",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issue/84927",
+                            "fields": {
+                                "summary": "Guus Gerritsen ",
+                                "status": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/status/10114",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/generic.png",
+                                    "name": "Beoordeling",
+                                    "id": "10114",
+                                    "statusCategory": {
+                                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/4",
+                                        "id": 4,
+                                        "key": "indeterminate",
+                                        "colorName": "yellow",
+                                        "name": "In Progress"
+                                    }
+                                },
+                                "priority": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                                    "name": "Low",
+                                    "id": "4"
+                                },
+                                "issuetype": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10079",
+                                    "id": "10079",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                                    "name": "Recruit",
+                                    "subtask": false,
+                                    "avatarId": 10300,
+                                    "hierarchyLevel": 0
+                                }
+                            }
+                        }
+                    }
+                ],
+                "assignee": "no_value",
+                "components": [],
+                "subtasks": [],
+                "reporter": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                    "accountId": "62cfce93c4c3be001fb586c5",
+                    "emailAddress": "irene.irenema@irenema.nl",
+                    "displayName": "Irene Irenema",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "progress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "votes": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issue/KRR-10/votes",
+                    "votes": 0,
+                    "hasVoted": false
+                },
+                "issuetype": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10081",
+                    "id": "10081",
+                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                    "name": "Job (Stage)",
+                    "subtask": false,
+                    "avatarId": 10300,
+                    "hierarchyLevel": 0
+                },
+                "project": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/project/10301",
+                    "id": "10301",
+                    "key": "KRR",
+                    "name": "Kopie Recruit RU",
+                    "projectTypeKey": "business",
+                    "simplified": false
+                },
+                "customfield_10031": [],
+                "customfield_10276": "no_value",
+                "customfield_10277": "no_value",
+                "watches": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issue/KRR-10/watchers",
+                    "watchCount": 1,
+                    "isWatching": false
+                },
+                "customfield_10018": {
+                    "hasEpicLinkFieldDependency": false,
+                    "showField": false,
+                    "nonEditableReason": {
+                        "reason": "EPIC_LINK_SHOULD_BE_USED",
+                        "message": "To set an epic as the parent, use the epic link instead"
+                    }
+                },
+                "customfield_10019": "0|x0d1o0:",
+                "updated": "2024-03-06T10:55:59.966+0100",
+                "customfield_10133": "no_value",
+                "customfield_10134": "no_value",
+                "customfield_10247": "no_value",
+                "summary": "Team Linde: Meewerkstage Software Development",
+                "customfield_10115": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10133",
+                    "value": "15",
+                    "id": "10133"
+                },
+                "customfield_10116": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10143",
+                    "value": "Hardware",
+                    "id": "10143",
+                    "child": {
+                        "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10145",
+                        "value": "Peripheral",
+                        "id": "10145"
+                    }
+                },
+                "customfield_10117": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10152",
+                    "value": "Incident",
+                    "id": "10152"
+                },
+                "duedate": "no_value",
+                "statuscategorychangedate": "2024-03-06T10:55:03.679+0100",
+                "fixVersions": [],
+                "customfield_10114": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10130",
+                    "value": "ja",
+                    "id": "10130"
+                },
+                "priority": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                    "name": "Low",
+                    "id": "4"
+                },
+                "versions": [],
+                "status": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/status/10111",
+                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Vac Open",
+                    "id": "10111",
+                    "statusCategory": {
+                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/4",
+                        "id": 4,
+                        "key": "indeterminate",
+                        "colorName": "yellow",
+                        "name": "In Progress"
+                    }
+                },
+                "creator": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                    "accountId": "62cfce93c4c3be001fb586c5",
+                    "emailAddress": "irene.irenema@irenema.nl",
+                    "displayName": "Irene Irenema",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "aggregateprogress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "customfield_10305": "no_value",
+                "workratio": -1,
+                "created": "2024-03-06T10:55:03.272+0100",
+                "customfield_10092": [],
+                "security": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/securitylevel/10019",
+                    "id": "10019",
+                    "description": "(Migrated on 4 May 2023 22:26 UTC)",
+                    "name": "Default"
+                }
+            }
+        },
+        {
+            "expand": "operations,customfield_10090.properties,versionedRepresentations,editmeta,changelog,customfield_10010.requestTypePractice,customfield_10278.properties,renderedFields,customfield_10089.properties",
+            "id": "84927",
+            "self": "https://avisi.atlassian.net/rest/api/3/issue/84927",
+            "key": "KRR-9",
+            "changelog": {
+                "startAt": 0,
+                "maxResults": 2,
+                "total": 2,
+                "histories": [
+                    {
+                        "id": "1014930",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T11:00:48.344+0100",
+                        "items": [
+                            {
+                                "field": "status",
+                                "fieldtype": "jira",
+                                "fieldId": "status",
+                                "from": "1",
+                                "fromString": "Open",
+                                "to": "10114",
+                                "toString": "Beoordeling"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014894",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:55:59.962+0100",
+                        "items": [
+                            {
+                                "field": "Link",
+                                "fieldtype": "jira",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "KRR-10",
+                                "toString": "This issue adresses KRR-10"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "fields": {
+                "lastViewed": "2024-03-12T14:42:45.526+0100",
+                "labels": [
+                    "AVG3",
+                    "Meewerkstage"
+                ],
+                "issuelinks": [
+                    {
+                        "id": "47898",
+                        "self": "https://avisi.atlassian.net/rest/api/3/issueLink/47898",
+                        "type": {
+                            "id": "10009",
+                            "name": "Adressed",
+                            "inward": "is adressed by",
+                            "outward": "adresses",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issueLinkType/10009"
+                        },
+                        "outwardIssue": {
+                            "id": "84928",
+                            "key": "KRR-10",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issue/84928",
+                            "fields": {
+                                "summary": "Team Linde: Meewerkstage Software Development",
+                                "status": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/status/10111",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/generic.png",
+                                    "name": "Vac Open",
+                                    "id": "10111",
+                                    "statusCategory": {
+                                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/4",
+                                        "id": 4,
+                                        "key": "indeterminate",
+                                        "colorName": "yellow",
+                                        "name": "In Progress"
+                                    }
+                                },
+                                "priority": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                                    "name": "Low",
+                                    "id": "4"
+                                },
+                                "issuetype": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10081",
+                                    "id": "10081",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                                    "name": "Job (Stage)",
+                                    "subtask": false,
+                                    "avatarId": 10300,
+                                    "hierarchyLevel": 0
+                                }
+                            }
+                        }
+                    }
+                ],
+                "assignee": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=712020%3A31379a8c-de27-40a9-a075-dba33dd9c147",
+                    "accountId": "712020:31379a8c-de27-40a9-a075-dba33dd9c147",
+                    "emailAddress": "bob.bouman@bouman.nl",
+                    "displayName": "Bob Bouman",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "components": [],
+                "subtasks": [],
+                "reporter": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                    "accountId": "62cfce93c4c3be001fb586c5",
+                    "emailAddress": "irene.irenema@irenema.nl",
+                    "displayName": "Irene Irenema",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "progress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "votes": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issue/KRR-9/votes",
+                    "votes": 0,
+                    "hasVoted": false
+                },
+                "issuetype": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10079",
+                    "id": "10079",
+                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                    "name": "Recruit",
+                    "subtask": false,
+                    "avatarId": 10300,
+                    "hierarchyLevel": 0
+                },
+                "project": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/project/10301",
+                    "id": "10301",
+                    "key": "KRR",
+                    "name": "Kopie Recruit RU",
+                    "projectTypeKey": "business",
+                    "simplified": false
+                },
+                "customfield_10031": [],
+                "customfield_10276": "",
+                "customfield_10277": 0,
+                "watches": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issue/KRR-9/watchers",
+                    "watchCount": 1,
+                    "isWatching": false
+                },
+                "customfield_10018": {
+                    "hasEpicLinkFieldDependency": false,
+                    "showField": false,
+                    "nonEditableReason": {
+                        "reason": "EPIC_LINK_SHOULD_BE_USED",
+                        "message": "To set an epic as the parent, use the epic link instead"
+                    }
+                },
+                "customfield_10019": "0|x0d1ns:",
+                "updated": "2024-03-06T11:00:48.305+0100",
+                "customfield_10133": "Guus@Gerritsen.nl",
+                "customfield_10134": "0612345678",
+                "customfield_10247": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10577",
+                    "value": "Technische functie",
+                    "id": "10577"
+                },
+                "summary": "Guus Gerritsen ",
+                "customfield_10115": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10133",
+                    "value": "15",
+                    "id": "10133"
+                },
+                "customfield_10116": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10143",
+                    "value": "Hardware",
+                    "id": "10143",
+                    "child": {
+                        "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10145",
+                        "value": "Peripheral",
+                        "id": "10145"
+                    }
+                },
+                "customfield_10117": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10152",
+                    "value": "Incident",
+                    "id": "10152"
+                },
+                "duedate": "no_value",
+                "statuscategorychangedate": "2024-03-06T11:00:48.305+0100",
+                "fixVersions": [],
+                "customfield_10114": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10130",
+                    "value": "ja",
+                    "id": "10130"
+                },
+                "priority": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                    "name": "Low",
+                    "id": "4"
+                },
+                "versions": [],
+                "status": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/status/10114",
+                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Beoordeling",
+                    "id": "10114",
+                    "statusCategory": {
+                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/4",
+                        "id": 4,
+                        "key": "indeterminate",
+                        "colorName": "yellow",
+                        "name": "In Progress"
+                    }
+                },
+                "creator": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                    "accountId": "62cfce93c4c3be001fb586c5",
+                    "emailAddress": "irene.irenema@irenema.nl",
+                    "displayName": "Irene Irenema",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "aggregateprogress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "customfield_10305": "no_value",
+                "workratio": -1,
+                "created": "2024-03-06T10:54:35.927+0100",
+                "customfield_10092": [],
+                "security": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/securitylevel/10019",
+                    "id": "10019",
+                    "description": "(Migrated on 4 May 2023 22:26 UTC)",
+                    "name": "Default"
+                }
+            }
+        },
+        {
+            "expand": "operations,customfield_10090.properties,versionedRepresentations,editmeta,changelog,customfield_10010.requestTypePractice,customfield_10278.properties,renderedFields,customfield_10089.properties",
+            "id": "84917",
+            "self": "https://avisi.atlassian.net/rest/api/3/issue/84917",
+            "key": "KRR-8",
+            "changelog": {
+                "startAt": 0,
+                "maxResults": 1,
+                "total": 1,
+                "histories": [
+                    {
+                        "id": "1014853",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:53:31.634+0100",
+                        "items": [
+                            {
+                                "field": "Link",
+                                "fieldtype": "jira",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "KRR-2",
+                                "toString": "This issue adresses KRR-2"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "fields": {
+                "lastViewed": "2024-03-12T14:42:54.238+0100",
+                "labels": [
+                    "Afstudeerstage"
+                ],
+                "issuelinks": [
+                    {
+                        "id": "47888",
+                        "self": "https://avisi.atlassian.net/rest/api/3/issueLink/47888",
+                        "type": {
+                            "id": "10009",
+                            "name": "Adressed",
+                            "inward": "is adressed by",
+                            "outward": "adresses",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issueLinkType/10009"
+                        },
+                        "outwardIssue": {
+                            "id": "84910",
+                            "key": "KRR-2",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issue/84910",
+                            "fields": {
+                                "summary": "Apps: Afstudeerstage Ontwikkeling AI Anablement Service",
+                                "status": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/status/10111",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/generic.png",
+                                    "name": "Vac Open",
+                                    "id": "10111",
+                                    "statusCategory": {
+                                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/4",
+                                        "id": 4,
+                                        "key": "indeterminate",
+                                        "colorName": "yellow",
+                                        "name": "In Progress"
+                                    }
+                                },
+                                "priority": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                                    "name": "Low",
+                                    "id": "4"
+                                },
+                                "issuetype": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10081",
+                                    "id": "10081",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                                    "name": "Job (Stage)",
+                                    "subtask": false,
+                                    "avatarId": 10300,
+                                    "hierarchyLevel": 0
+                                }
+                            }
+                        }
+                    }
+                ],
+                "assignee": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=712020%3A31379a8c-de27-40a9-a075-dba33dd9c147",
+                    "accountId": "712020:31379a8c-de27-40a9-a075-dba33dd9c147",
+                    "emailAddress": "bob.bouman@bouman.nl",
+                    "displayName": "Bob Bouman",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "components": [],
+                "subtasks": [],
+                "reporter": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                    "accountId": "62cfce93c4c3be001fb586c5",
+                    "emailAddress": "irene.irenema@irenema.nl",
+                    "displayName": "Irene Irenema",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "progress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "votes": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issue/KRR-8/votes",
+                    "votes": 0,
+                    "hasVoted": false
+                },
+                "issuetype": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10079",
+                    "id": "10079",
+                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                    "name": "Recruit",
+                    "subtask": false,
+                    "avatarId": 10300,
+                    "hierarchyLevel": 0
+                },
+                "customfield_10031": [],
+                "project": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/project/10301",
+                    "id": "10301",
+                    "key": "KRR",
+                    "name": "Kopie Recruit RU",
+                    "projectTypeKey": "business",
+                    "simplified": false
+                },
+                "customfield_10276": "no_value",
+                "customfield_10277": "no_value",
+                "watches": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issue/KRR-8/watchers",
+                    "watchCount": 1,
+                    "isWatching": false
+                },
+                "customfield_10018": {
+                    "hasEpicLinkFieldDependency": false,
+                    "showField": false,
+                    "nonEditableReason": {
+                        "reason": "EPIC_LINK_SHOULD_BE_USED",
+                        "message": "To set an epic as the parent, use the epic link instead"
+                    }
+                },
+                "customfield_10019": "0|x0d1lk:",
+                "updated": "2024-03-06T10:53:31.792+0100",
+                "customfield_10133": "frits@fiets.nl",
+                "customfield_10134": "no_value",
+                "customfield_10247": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10577",
+                    "value": "Technische functie",
+                    "id": "10577"
+                },
+                "summary": "Frits Fiets",
+                "customfield_10115": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10133",
+                    "value": "15",
+                    "id": "10133"
+                },
+                "customfield_10116": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10143",
+                    "value": "Hardware",
+                    "id": "10143",
+                    "child": {
+                        "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10145",
+                        "value": "Peripheral",
+                        "id": "10145"
+                    }
+                },
+                "customfield_10117": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10152",
+                    "value": "Incident",
+                    "id": "10152"
+                },
+                "duedate": "no_value",
+                "statuscategorychangedate": "2024-03-06T10:53:32.117+0100",
+                "fixVersions": [],
+                "customfield_10114": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10130",
+                    "value": "ja",
+                    "id": "10130"
+                },
+                "priority": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                    "name": "Low",
+                    "id": "4"
+                },
+                "versions": [],
+                "status": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/status/1",
+                    "description": "The issue is open and ready for the assignee to start work on it.",
+                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/open.png",
+                    "name": "Open",
+                    "id": "1",
+                    "statusCategory": {
+                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                },
+                "creator": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                    "accountId": "62cfce93c4c3be001fb586c5",
+                    "emailAddress": "irene.irenema@irenema.nl",
+                    "displayName": "Irene Irenema",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "aggregateprogress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "customfield_10305": "Afstudeerstage Ontwikkeling AI Anablement Service",
+                "workratio": -1,
+                "created": "2024-03-06T10:53:31.602+0100",
+                "customfield_10092": [],
+                "security": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/securitylevel/10019",
+                    "id": "10019",
+                    "description": "(Migrated on 4 May 2023 22:26 UTC)",
+                    "name": "Default"
+                }
+            }
+        },
+        {
+            "expand": "operations,customfield_10090.properties,versionedRepresentations,editmeta,changelog,customfield_10010.requestTypePractice,customfield_10278.properties,renderedFields,customfield_10089.properties",
+            "id": "84916",
+            "self": "https://avisi.atlassian.net/rest/api/3/issue/84916",
+            "key": "KRR-7",
+            "changelog": {
+                "startAt": 0,
+                "maxResults": 2,
+                "total": 2,
+                "histories": [
+                    {
+                        "id": "1014816",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:45:54.398+0100",
+                        "items": [
+                            {
+                                "field": "Attachment",
+                                "fieldtype": "jira",
+                                "fieldId": "attachment",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "41072",
+                                "toString": "Dummie CV .pdf"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014810",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:45:44.644+0100",
+                        "items": [
+                            {
+                                "field": "Link",
+                                "fieldtype": "jira",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "KRR-1",
+                                "toString": "This issue adresses KRR-1"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "fields": {
+                "lastViewed": "no_value",
+                "labels": [
+                    "Medewerker"
+                ],
+                "issuelinks": [
+                    {
+                        "id": "47887",
+                        "self": "https://avisi.atlassian.net/rest/api/3/issueLink/47887",
+                        "type": {
+                            "id": "10009",
+                            "name": "Adressed",
+                            "inward": "is adressed by",
+                            "outward": "adresses",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issueLinkType/10009"
+                        },
+                        "outwardIssue": {
+                            "id": "84907",
+                            "key": "KRR-1",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issue/84907",
+                            "fields": {
+                                "summary": "Vacature HR Medewerker ",
+                                "status": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/status/10111",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/generic.png",
+                                    "name": "Vac Open",
+                                    "id": "10111",
+                                    "statusCategory": {
+                                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/4",
+                                        "id": 4,
+                                        "key": "indeterminate",
+                                        "colorName": "yellow",
+                                        "name": "In Progress"
+                                    }
+                                },
+                                "priority": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                                    "name": "Low",
+                                    "id": "4"
+                                },
+                                "issuetype": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10080",
+                                    "id": "10080",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                                    "name": "Job (Regular)",
+                                    "subtask": false,
+                                    "avatarId": 10300,
+                                    "hierarchyLevel": 0
+                                }
+                            }
+                        }
+                    }
+                ],
+                "assignee": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=712020%3A31379a8c-de27-40a9-a075-dba33dd9c147",
+                    "accountId": "712020:31379a8c-de27-40a9-a075-dba33dd9c147",
+                    "emailAddress": "bob.bouman@bouman.nl",
+                    "displayName": "Bob Bouman",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "components": [],
+                "subtasks": [],
+                "reporter": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                    "accountId": "62cfce93c4c3be001fb586c5",
+                    "emailAddress": "irene.irenema@irenema.nl",
+                    "displayName": "Irene Irenema",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "progress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "votes": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issue/KRR-7/votes",
+                    "votes": 0,
+                    "hasVoted": false
+                },
+                "issuetype": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10079",
+                    "id": "10079",
+                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                    "name": "Recruit",
+                    "subtask": false,
+                    "avatarId": 10300,
+                    "hierarchyLevel": 0
+                },
+                "project": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/project/10301",
+                    "id": "10301",
+                    "key": "KRR",
+                    "name": "Kopie Recruit RU",
+                    "projectTypeKey": "business",
+                    "simplified": false
+                },
+                "customfield_10031": [],
+                "customfield_10276": "",
+                "customfield_10277": 0,
+                "watches": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issue/KRR-7/watchers",
+                    "watchCount": 1,
+                    "isWatching": false
+                },
+                "customfield_10018": {
+                    "hasEpicLinkFieldDependency": false,
+                    "showField": false,
+                    "nonEditableReason": {
+                        "reason": "EPIC_LINK_SHOULD_BE_USED",
+                        "message": "To set an epic as the parent, use the epic link instead"
+                    }
+                },
+                "customfield_10019": "0|x0d1lc:",
+                "updated": "2024-03-06T10:45:55.927+0100",
+                "customfield_10133": "Eline@evers.nl",
+                "customfield_10134": "0612345678",
+                "customfield_10247": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10578",
+                    "value": "Non-technische functie",
+                    "id": "10578"
+                },
+                "summary": "Elline Evers",
+                "customfield_10115": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10133",
+                    "value": "15",
+                    "id": "10133"
+                },
+                "customfield_10116": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10143",
+                    "value": "Hardware",
+                    "id": "10143",
+                    "child": {
+                        "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10145",
+                        "value": "Peripheral",
+                        "id": "10145"
+                    }
+                },
+                "customfield_10117": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10152",
+                    "value": "Incident",
+                    "id": "10152"
+                },
+                "duedate": "no_value",
+                "statuscategorychangedate": "2024-03-06T10:45:45.021+0100",
+                "fixVersions": [],
+                "customfield_10114": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10130",
+                    "value": "ja",
+                    "id": "10130"
+                },
+                "priority": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                    "name": "Low",
+                    "id": "4"
+                },
+                "versions": [],
+                "status": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/status/1",
+                    "description": "The issue is open and ready for the assignee to start work on it.",
+                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/open.png",
+                    "name": "Open",
+                    "id": "1",
+                    "statusCategory": {
+                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/2",
+                        "id": 2,
+                        "key": "new",
+                        "colorName": "blue-gray",
+                        "name": "To Do"
+                    }
+                },
+                "creator": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                    "accountId": "62cfce93c4c3be001fb586c5",
+                    "emailAddress": "irene.irenema@irenema.nl",
+                    "displayName": "Irene Irenema",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "aggregateprogress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "customfield_10305": "HR Medewerker",
+                "workratio": -1,
+                "created": "2024-03-06T10:45:44.614+0100",
+                "customfield_10092": [],
+                "security": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/securitylevel/10019",
+                    "id": "10019",
+                    "description": "(Migrated on 4 May 2023 22:26 UTC)",
+                    "name": "Default"
+                }
+            }
+        },
+        {
+            "expand": "operations,customfield_10090.properties,versionedRepresentations,editmeta,changelog,customfield_10010.requestTypePractice,customfield_10278.properties,renderedFields,customfield_10089.properties",
+            "id": "84915",
+            "self": "https://avisi.atlassian.net/rest/api/3/issue/84915",
+            "key": "KRR-6",
+            "changelog": {
+                "startAt": 0,
+                "maxResults": 4,
+                "total": 4,
+                "histories": [
+                    {
+                        "id": "1014932",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T11:01:10.611+0100",
+                        "items": [
+                            {
+                                "field": "labels",
+                                "fieldtype": "jira",
+                                "fieldId": "labels",
+                                "from": "no_value",
+                                "fromString": "Medewerker",
+                                "to": "no_value",
+                                "toString": "AVG_clean Medewerker"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014803",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:44:32.058+0100",
+                        "items": [
+                            {
+                                "field": "status",
+                                "fieldtype": "jira",
+                                "fieldId": "status",
+                                "from": "1",
+                                "fromString": "Open",
+                                "to": "10114",
+                                "toString": "Beoordeling"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014802",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:44:24.008+0100",
+                        "items": [
+                            {
+                                "field": "Attachment",
+                                "fieldtype": "jira",
+                                "fieldId": "attachment",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "41069",
+                                "toString": "Dummie CV .pdf"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014799",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:44:07.093+0100",
+                        "items": [
+                            {
+                                "field": "Link",
+                                "fieldtype": "jira",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "KRR-1",
+                                "toString": "This issue adresses KRR-1"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "fields": {
+                "lastViewed": "no_value",
+                "labels": [
+                    "AVG_clean",
+                    "Medewerker"
+                ],
+                "issuelinks": [
+                    {
+                        "id": "47886",
+                        "self": "https://avisi.atlassian.net/rest/api/3/issueLink/47886",
+                        "type": {
+                            "id": "10009",
+                            "name": "Adressed",
+                            "inward": "is adressed by",
+                            "outward": "adresses",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issueLinkType/10009"
+                        },
+                        "outwardIssue": {
+                            "id": "84907",
+                            "key": "KRR-1",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issue/84907",
+                            "fields": {
+                                "summary": "Vacature HR Medewerker ",
+                                "status": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/status/10111",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/generic.png",
+                                    "name": "Vac Open",
+                                    "id": "10111",
+                                    "statusCategory": {
+                                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/4",
+                                        "id": 4,
+                                        "key": "indeterminate",
+                                        "colorName": "yellow",
+                                        "name": "In Progress"
+                                    }
+                                },
+                                "priority": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                                    "name": "Low",
+                                    "id": "4"
+                                },
+                                "issuetype": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10080",
+                                    "id": "10080",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                                    "name": "Job (Regular)",
+                                    "subtask": false,
+                                    "avatarId": 10300,
+                                    "hierarchyLevel": 0
+                                }
+                            }
+                        }
+                    }
+                ],
+                "assignee": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=712020%3A31379a8c-de27-40a9-a075-dba33dd9c147",
+                    "accountId": "712020:31379a8c-de27-40a9-a075-dba33dd9c147",
+                    "emailAddress": "bob.bouman@bouman.nl",
+                    "displayName": "Bob Bouman",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "components": [],
+                "subtasks": [],
+                "reporter": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                    "accountId": "62cfce93c4c3be001fb586c5",
+                    "emailAddress": "irene.irenema@irenema.nl",
+                    "displayName": "Irene Irenema",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "progress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "votes": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issue/KRR-6/votes",
+                    "votes": 0,
+                    "hasVoted": false
+                },
+                "issuetype": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10079",
+                    "id": "10079",
+                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                    "name": "Recruit",
+                    "subtask": false,
+                    "avatarId": 10300,
+                    "hierarchyLevel": 0
+                },
+                "project": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/project/10301",
+                    "id": "10301",
+                    "key": "KRR",
+                    "name": "Kopie Recruit RU",
+                    "projectTypeKey": "business",
+                    "simplified": false
+                },
+                "customfield_10031": [],
+                "customfield_10276": "",
+                "customfield_10277": 0,
+                "watches": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issue/KRR-6/watchers",
+                    "watchCount": 1,
+                    "isWatching": false
+                },
+                "customfield_10018": {
+                    "hasEpicLinkFieldDependency": false,
+                    "showField": false,
+                    "nonEditableReason": {
+                        "reason": "EPIC_LINK_SHOULD_BE_USED",
+                        "message": "To set an epic as the parent, use the epic link instead"
+                    }
+                },
+                "customfield_10019": "0|x0d1l4:",
+                "updated": "2024-03-06T11:01:10.604+0100",
+                "customfield_10133": "dirk@driessen.nl",
+                "customfield_10134": "0612345678",
+                "customfield_10247": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10578",
+                    "value": "Non-technische functie",
+                    "id": "10578"
+                },
+                "summary": "Dirk Driessen",
+                "customfield_10115": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10133",
+                    "value": "15",
+                    "id": "10133"
+                },
+                "customfield_10116": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10143",
+                    "value": "Hardware",
+                    "id": "10143",
+                    "child": {
+                        "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10145",
+                        "value": "Peripheral",
+                        "id": "10145"
+                    }
+                },
+                "customfield_10117": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10152",
+                    "value": "Incident",
+                    "id": "10152"
+                },
+                "duedate": "no_value",
+                "statuscategorychangedate": "2024-03-06T10:44:32.030+0100",
+                "fixVersions": [],
+                "customfield_10114": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10130",
+                    "value": "ja",
+                    "id": "10130"
+                },
+                "priority": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                    "name": "Low",
+                    "id": "4"
+                },
+                "versions": [],
+                "status": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/status/10114",
+                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Beoordeling",
+                    "id": "10114",
+                    "statusCategory": {
+                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/4",
+                        "id": 4,
+                        "key": "indeterminate",
+                        "colorName": "yellow",
+                        "name": "In Progress"
+                    }
+                },
+                "creator": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                    "accountId": "62cfce93c4c3be001fb586c5",
+                    "emailAddress": "irene.irenema@irenema.nl",
+                    "displayName": "Irene Irenema",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "aggregateprogress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "customfield_10305": "HR Medewerker",
+                "workratio": -1,
+                "created": "2024-03-06T10:44:07.068+0100",
+                "customfield_10092": [],
+                "security": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/securitylevel/10019",
+                    "id": "10019",
+                    "description": "(Migrated on 4 May 2023 22:26 UTC)",
+                    "name": "Default"
+                }
+            }
+        },
+        {
+            "expand": "operations,customfield_10090.properties,versionedRepresentations,editmeta,changelog,customfield_10010.requestTypePractice,customfield_10278.properties,renderedFields,customfield_10089.properties",
+            "id": "84914",
+            "self": "https://avisi.atlassian.net/rest/api/3/issue/84914",
+            "key": "KRR-5",
+            "changelog": {
+                "startAt": 0,
+                "maxResults": 4,
+                "total": 4,
+                "histories": [
+                    {
+                        "id": "1014794",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:40:56.731+0100",
+                        "items": [
+                            {
+                                "field": "duedate",
+                                "fieldtype": "jira",
+                                "fieldId": "duedate",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "2024-03-06",
+                                "toString": "2024-03-06 00:00:00.0"
+                            },
+                            {
+                                "field": "status",
+                                "fieldtype": "jira",
+                                "fieldId": "status",
+                                "from": "10114",
+                                "fromString": "Beoordeling",
+                                "to": "10106",
+                                "toString": "1egesprek"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014793",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:40:49.798+0100",
+                        "items": [
+                            {
+                                "field": "status",
+                                "fieldtype": "jira",
+                                "fieldId": "status",
+                                "from": "1",
+                                "fromString": "Open",
+                                "to": "10114",
+                                "toString": "Beoordeling"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014788",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:39:12.484+0100",
+                        "items": [
+                            {
+                                "field": "Attachment",
+                                "fieldtype": "jira",
+                                "fieldId": "attachment",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "41068",
+                                "toString": "Dummie CV .pdf"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014784",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:39:00.390+0100",
+                        "items": [
+                            {
+                                "field": "Link",
+                                "fieldtype": "jira",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "KRR-1",
+                                "toString": "This issue adresses KRR-1"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "fields": {
+                "lastViewed": "no_value",
+                "labels": [
+                    "Medewerker"
+                ],
+                "issuelinks": [
+                    {
+                        "id": "47885",
+                        "self": "https://avisi.atlassian.net/rest/api/3/issueLink/47885",
+                        "type": {
+                            "id": "10009",
+                            "name": "Adressed",
+                            "inward": "is adressed by",
+                            "outward": "adresses",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issueLinkType/10009"
+                        },
+                        "outwardIssue": {
+                            "id": "84907",
+                            "key": "KRR-1",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issue/84907",
+                            "fields": {
+                                "summary": "Vacature HR Medewerker ",
+                                "status": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/status/10111",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/generic.png",
+                                    "name": "Vac Open",
+                                    "id": "10111",
+                                    "statusCategory": {
+                                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/4",
+                                        "id": 4,
+                                        "key": "indeterminate",
+                                        "colorName": "yellow",
+                                        "name": "In Progress"
+                                    }
+                                },
+                                "priority": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                                    "name": "Low",
+                                    "id": "4"
+                                },
+                                "issuetype": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10080",
+                                    "id": "10080",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                                    "name": "Job (Regular)",
+                                    "subtask": false,
+                                    "avatarId": 10300,
+                                    "hierarchyLevel": 0
+                                }
+                            }
+                        }
+                    }
+                ],
+                "assignee": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=712020%3A31379a8c-de27-40a9-a075-dba33dd9c147",
+                    "accountId": "712020:31379a8c-de27-40a9-a075-dba33dd9c147",
+                    "emailAddress": "bob.bouman@bouman.nl",
+                    "displayName": "Bob Bouman",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "components": [],
+                "subtasks": [],
+                "reporter": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                    "accountId": "62cfce93c4c3be001fb586c5",
+                    "emailAddress": "irene.irenema@irenema.nl",
+                    "displayName": "Irene Irenema",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "progress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "votes": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issue/KRR-5/votes",
+                    "votes": 0,
+                    "hasVoted": false
+                },
+                "issuetype": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10079",
+                    "id": "10079",
+                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                    "name": "Recruit",
+                    "subtask": false,
+                    "avatarId": 10300,
+                    "hierarchyLevel": 0
+                },
+                "customfield_10031": [],
+                "project": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/project/10301",
+                    "id": "10301",
+                    "key": "KRR",
+                    "name": "Kopie Recruit RU",
+                    "projectTypeKey": "business",
+                    "simplified": false
+                },
+                "customfield_10276": "",
+                "customfield_10277": 0,
+                "watches": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issue/KRR-5/watchers",
+                    "watchCount": 1,
+                    "isWatching": false
+                },
+                "customfield_10018": {
+                    "hasEpicLinkFieldDependency": false,
+                    "showField": false,
+                    "nonEditableReason": {
+                        "reason": "EPIC_LINK_SHOULD_BE_USED",
+                        "message": "To set an epic as the parent, use the epic link instead"
+                    }
+                },
+                "customfield_10019": "0|x0d1kw:",
+                "updated": "2024-03-06T10:40:56.710+0100",
+                "customfield_10133": "Caroline@Claessens.nl",
+                "customfield_10134": "0612345678",
+                "customfield_10247": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10578",
+                    "value": "Non-technische functie",
+                    "id": "10578"
+                },
+                "summary": "Caroline Claessens",
+                "customfield_10115": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10133",
+                    "value": "15",
+                    "id": "10133"
+                },
+                "customfield_10116": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10143",
+                    "value": "Hardware",
+                    "id": "10143",
+                    "child": {
+                        "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10145",
+                        "value": "Peripheral",
+                        "id": "10145"
+                    }
+                },
+                "customfield_10117": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10152",
+                    "value": "Incident",
+                    "id": "10152"
+                },
+                "duedate": "2024-03-06",
+                "statuscategorychangedate": "2024-03-06T10:40:49.765+0100",
+                "fixVersions": [],
+                "customfield_10114": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10130",
+                    "value": "ja",
+                    "id": "10130"
+                },
+                "priority": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                    "name": "Low",
+                    "id": "4"
+                },
+                "versions": [],
+                "status": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/status/10106",
+                    "description": "1e gesprek is gepland (Migrated on 4 May 2023 22:50 UTC)",
+                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "1egesprek",
+                    "id": "10106",
+                    "statusCategory": {
+                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/4",
+                        "id": 4,
+                        "key": "indeterminate",
+                        "colorName": "yellow",
+                        "name": "In Progress"
+                    }
+                },
+                "creator": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                    "accountId": "62cfce93c4c3be001fb586c5",
+                    "emailAddress": "irene.irenema@irenema.nl",
+                    "displayName": "Irene Irenema",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "aggregateprogress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "customfield_10305": "HR Medewerker",
+                "workratio": -1,
+                "created": "2024-03-06T10:39:00.365+0100",
+                "customfield_10092": [],
+                "security": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/securitylevel/10019",
+                    "id": "10019",
+                    "description": "(Migrated on 4 May 2023 22:26 UTC)",
+                    "name": "Default"
+                }
+            }
+        },
+        {
+            "expand": "operations,customfield_10090.properties,versionedRepresentations,editmeta,changelog,customfield_10010.requestTypePractice,customfield_10278.properties,renderedFields,customfield_10089.properties",
+            "id": "84913",
+            "self": "https://avisi.atlassian.net/rest/api/3/issue/84913",
+            "key": "KRR-4",
+            "changelog": {
+                "startAt": 0,
+                "maxResults": 6,
+                "total": 6,
+                "histories": [
+                    {
+                        "id": "1014933",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T11:01:27.911+0100",
+                        "items": [
+                            {
+                                "field": "labels",
+                                "fieldtype": "jira",
+                                "fieldId": "labels",
+                                "from": "no_value",
+                                "fromString": "Medewerker",
+                                "to": "no_value",
+                                "toString": "AVG3 Medewerker"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014773",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:37:03.627+0100",
+                        "items": [
+                            {
+                                "field": "duedate",
+                                "fieldtype": "jira",
+                                "fieldId": "duedate",
+                                "from": "2024-03-06",
+                                "fromString": "2024-03-06 00:00:00.0",
+                                "to": "2024-03-07",
+                                "toString": "2024-03-07 00:00:00.0"
+                            },
+                            {
+                                "field": "status",
+                                "fieldtype": "jira",
+                                "fieldId": "status",
+                                "from": "10106",
+                                "fromString": "1egesprek",
+                                "to": "10107",
+                                "toString": "2egesprek"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014772",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:36:56.258+0100",
+                        "items": [
+                            {
+                                "field": "duedate",
+                                "fieldtype": "jira",
+                                "fieldId": "duedate",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "2024-03-06",
+                                "toString": "2024-03-06 00:00:00.0"
+                            },
+                            {
+                                "field": "status",
+                                "fieldtype": "jira",
+                                "fieldId": "status",
+                                "from": "10114",
+                                "fromString": "Beoordeling",
+                                "to": "10106",
+                                "toString": "1egesprek"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014770",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:36:48.721+0100",
+                        "items": [
+                            {
+                                "field": "status",
+                                "fieldtype": "jira",
+                                "fieldId": "status",
+                                "from": "1",
+                                "fromString": "Open",
+                                "to": "10114",
+                                "toString": "Beoordeling"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014767",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:36:30.540+0100",
+                        "items": [
+                            {
+                                "field": "Attachment",
+                                "fieldtype": "jira",
+                                "fieldId": "attachment",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "41067",
+                                "toString": "Dummie CV .pdf"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014764",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:36:18.209+0100",
+                        "items": [
+                            {
+                                "field": "Link",
+                                "fieldtype": "jira",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "KRR-1",
+                                "toString": "This issue adresses KRR-1"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "fields": {
+                "lastViewed": "no_value",
+                "labels": [
+                    "AVG3",
+                    "Medewerker"
+                ],
+                "issuelinks": [
+                    {
+                        "id": "47884",
+                        "self": "https://avisi.atlassian.net/rest/api/3/issueLink/47884",
+                        "type": {
+                            "id": "10009",
+                            "name": "Adressed",
+                            "inward": "is adressed by",
+                            "outward": "adresses",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issueLinkType/10009"
+                        },
+                        "outwardIssue": {
+                            "id": "84907",
+                            "key": "KRR-1",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issue/84907",
+                            "fields": {
+                                "summary": "Vacature HR Medewerker ",
+                                "status": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/status/10111",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/generic.png",
+                                    "name": "Vac Open",
+                                    "id": "10111",
+                                    "statusCategory": {
+                                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/4",
+                                        "id": 4,
+                                        "key": "indeterminate",
+                                        "colorName": "yellow",
+                                        "name": "In Progress"
+                                    }
+                                },
+                                "priority": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                                    "name": "Low",
+                                    "id": "4"
+                                },
+                                "issuetype": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10080",
+                                    "id": "10080",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                                    "name": "Job (Regular)",
+                                    "subtask": false,
+                                    "avatarId": 10300,
+                                    "hierarchyLevel": 0
+                                }
+                            }
+                        }
+                    }
+                ],
+                "assignee": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=712020%3A31379a8c-de27-40a9-a075-dba33dd9c147",
+                    "accountId": "712020:31379a8c-de27-40a9-a075-dba33dd9c147",
+                    "emailAddress": "bob.bouman@bouman.nl",
+                    "displayName": "Bob Bouman",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "components": [],
+                "subtasks": [],
+                "reporter": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                    "accountId": "62cfce93c4c3be001fb586c5",
+                    "emailAddress": "irene.irenema@irenema.nl",
+                    "displayName": "Irene Irenema",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "progress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "votes": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issue/KRR-4/votes",
+                    "votes": 0,
+                    "hasVoted": false
+                },
+                "issuetype": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10079",
+                    "id": "10079",
+                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                    "name": "Recruit",
+                    "subtask": false,
+                    "avatarId": 10300,
+                    "hierarchyLevel": 0
+                },
+                "customfield_10031": [],
+                "project": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/project/10301",
+                    "id": "10301",
+                    "key": "KRR",
+                    "name": "Kopie Recruit RU",
+                    "projectTypeKey": "business",
+                    "simplified": false
+                },
+                "customfield_10276": "",
+                "customfield_10277": 0,
+                "watches": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issue/KRR-4/watchers",
+                    "watchCount": 1,
+                    "isWatching": false
+                },
+                "customfield_10018": {
+                    "hasEpicLinkFieldDependency": false,
+                    "showField": false,
+                    "nonEditableReason": {
+                        "reason": "EPIC_LINK_SHOULD_BE_USED",
+                        "message": "To set an epic as the parent, use the epic link instead"
+                    }
+                },
+                "customfield_10019": "0|x0d1ko:",
+                "updated": "2024-03-06T11:01:27.906+0100",
+                "customfield_10133": "barry@berendsen.nl ",
+                "customfield_10134": "06123456789",
+                "customfield_10247": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10578",
+                    "value": "Non-technische functie",
+                    "id": "10578"
+                },
+                "summary": "Barry Berendsen",
+                "customfield_10115": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10133",
+                    "value": "15",
+                    "id": "10133"
+                },
+                "customfield_10116": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10143",
+                    "value": "Hardware",
+                    "id": "10143",
+                    "child": {
+                        "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10145",
+                        "value": "Peripheral",
+                        "id": "10145"
+                    }
+                },
+                "customfield_10117": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10152",
+                    "value": "Incident",
+                    "id": "10152"
+                },
+                "duedate": "2024-03-07",
+                "statuscategorychangedate": "2024-03-06T10:36:48.690+0100",
+                "fixVersions": [],
+                "customfield_10114": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10130",
+                    "value": "ja",
+                    "id": "10130"
+                },
+                "priority": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                    "name": "Low",
+                    "id": "4"
+                },
+                "versions": [],
+                "status": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/status/10107",
+                    "description": "2e gesprek is gepland (Migrated on 4 May 2023 22:50 UTC)",
+                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "2egesprek",
+                    "id": "10107",
+                    "statusCategory": {
+                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/4",
+                        "id": 4,
+                        "key": "indeterminate",
+                        "colorName": "yellow",
+                        "name": "In Progress"
+                    }
+                },
+                "creator": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                    "accountId": "62cfce93c4c3be001fb586c5",
+                    "emailAddress": "irene.irenema@irenema.nl",
+                    "displayName": "Irene Irenema",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "aggregateprogress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "customfield_10305": "HR Medewerker",
+                "workratio": -1,
+                "created": "2024-03-06T10:36:18.183+0100",
+                "customfield_10092": [],
+                "security": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/securitylevel/10019",
+                    "id": "10019",
+                    "description": "(Migrated on 4 May 2023 22:26 UTC)",
+                    "name": "Default"
+                }
+            }
+        },
+        {
+            "expand": "operations,customfield_10090.properties,versionedRepresentations,editmeta,changelog,customfield_10010.requestTypePractice,customfield_10278.properties,renderedFields,customfield_10089.properties",
+            "id": "84912",
+            "self": "https://avisi.atlassian.net/rest/api/3/issue/84912",
+            "key": "KRR-3",
+            "changelog": {
+                "startAt": 0,
+                "maxResults": 5,
+                "total": 5,
+                "histories": [
+                    {
+                        "id": "1014750",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:33:30.461+0100",
+                        "items": [
+                            {
+                                "field": "duedate",
+                                "fieldtype": "jira",
+                                "fieldId": "duedate",
+                                "from": "2024-03-07",
+                                "fromString": "2024-03-07 00:00:00.0",
+                                "to": "2024-03-08",
+                                "toString": "2024-03-08 00:00:00.0"
+                            },
+                            {
+                                "field": "status",
+                                "fieldtype": "jira",
+                                "fieldId": "status",
+                                "from": "10107",
+                                "fromString": "2egesprek",
+                                "to": "10108",
+                                "toString": "3egesprek"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014749",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:33:16.969+0100",
+                        "items": [
+                            {
+                                "field": "duedate",
+                                "fieldtype": "jira",
+                                "fieldId": "duedate",
+                                "from": "2024-03-06",
+                                "fromString": "2024-03-06 00:00:00.0",
+                                "to": "2024-03-07",
+                                "toString": "2024-03-07 00:00:00.0"
+                            },
+                            {
+                                "field": "status",
+                                "fieldtype": "jira",
+                                "fieldId": "status",
+                                "from": "10106",
+                                "fromString": "1egesprek",
+                                "to": "10107",
+                                "toString": "2egesprek"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014748",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:33:08.680+0100",
+                        "items": [
+                            {
+                                "field": "duedate",
+                                "fieldtype": "jira",
+                                "fieldId": "duedate",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "2024-03-06",
+                                "toString": "2024-03-06 00:00:00.0"
+                            },
+                            {
+                                "field": "status",
+                                "fieldtype": "jira",
+                                "fieldId": "status",
+                                "from": "10114",
+                                "fromString": "Beoordeling",
+                                "to": "10106",
+                                "toString": "1egesprek"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014747",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:32:57.026+0100",
+                        "items": [
+                            {
+                                "field": "status",
+                                "fieldtype": "jira",
+                                "fieldId": "status",
+                                "from": "1",
+                                "fromString": "Open",
+                                "to": "10114",
+                                "toString": "Beoordeling"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014726",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:22:43.693+0100",
+                        "items": [
+                            {
+                                "field": "Link",
+                                "fieldtype": "jira",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "KRR-1",
+                                "toString": "This issue adresses KRR-1"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "fields": {
+                "lastViewed": "no_value",
+                "labels": [],
+                "issuelinks": [
+                    {
+                        "id": "47883",
+                        "self": "https://avisi.atlassian.net/rest/api/3/issueLink/47883",
+                        "type": {
+                            "id": "10009",
+                            "name": "Adressed",
+                            "inward": "is adressed by",
+                            "outward": "adresses",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issueLinkType/10009"
+                        },
+                        "outwardIssue": {
+                            "id": "84907",
+                            "key": "KRR-1",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issue/84907",
+                            "fields": {
+                                "summary": "Vacature HR Medewerker ",
+                                "status": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/status/10111",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/generic.png",
+                                    "name": "Vac Open",
+                                    "id": "10111",
+                                    "statusCategory": {
+                                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/4",
+                                        "id": 4,
+                                        "key": "indeterminate",
+                                        "colorName": "yellow",
+                                        "name": "In Progress"
+                                    }
+                                },
+                                "priority": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                                    "name": "Low",
+                                    "id": "4"
+                                },
+                                "issuetype": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10080",
+                                    "id": "10080",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                                    "name": "Job (Regular)",
+                                    "subtask": false,
+                                    "avatarId": 10300,
+                                    "hierarchyLevel": 0
+                                }
+                            }
+                        }
+                    }
+                ],
+                "assignee": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=712020%3A31379a8c-de27-40a9-a075-dba33dd9c147",
+                    "accountId": "712020:31379a8c-de27-40a9-a075-dba33dd9c147",
+                    "emailAddress": "bob.bouman@bouman.nl",
+                    "displayName": "Bob Bouman",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "components": [],
+                "subtasks": [],
+                "reporter": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                    "accountId": "62cfce93c4c3be001fb586c5",
+                    "emailAddress": "irene.irenema@irenema.nl",
+                    "displayName": "Irene Irenema",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "progress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "votes": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issue/KRR-3/votes",
+                    "votes": 0,
+                    "hasVoted": false
+                },
+                "issuetype": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10079",
+                    "id": "10079",
+                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                    "name": "Recruit",
+                    "subtask": false,
+                    "avatarId": 10300,
+                    "hierarchyLevel": 0
+                },
+                "customfield_10031": [],
+                "project": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/project/10301",
+                    "id": "10301",
+                    "key": "KRR",
+                    "name": "Kopie Recruit RU",
+                    "projectTypeKey": "business",
+                    "simplified": false
+                },
+                "customfield_10276": "",
+                "customfield_10277": 0,
+                "watches": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issue/KRR-3/watchers",
+                    "watchCount": 1,
+                    "isWatching": false
+                },
+                "customfield_10018": {
+                    "hasEpicLinkFieldDependency": false,
+                    "showField": false,
+                    "nonEditableReason": {
+                        "reason": "EPIC_LINK_SHOULD_BE_USED",
+                        "message": "To set an epic as the parent, use the epic link instead"
+                    }
+                },
+                "customfield_10019": "0|x0d1kg:",
+                "updated": "2024-03-06T10:33:30.443+0100",
+                "customfield_10133": "annie@arendsen.nl ",
+                "customfield_10134": "0612345678",
+                "customfield_10247": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10578",
+                    "value": "Non-technische functie",
+                    "id": "10578"
+                },
+                "summary": "Annie Arendsen ",
+                "customfield_10115": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10133",
+                    "value": "15",
+                    "id": "10133"
+                },
+                "customfield_10116": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10143",
+                    "value": "Hardware",
+                    "id": "10143",
+                    "child": {
+                        "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10145",
+                        "value": "Peripheral",
+                        "id": "10145"
+                    }
+                },
+                "customfield_10117": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10152",
+                    "value": "Incident",
+                    "id": "10152"
+                },
+                "duedate": "2024-03-08",
+                "statuscategorychangedate": "2024-03-06T10:32:56.992+0100",
+                "fixVersions": [],
+                "customfield_10114": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10130",
+                    "value": "ja",
+                    "id": "10130"
+                },
+                "priority": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                    "name": "Low",
+                    "id": "4"
+                },
+                "versions": [],
+                "status": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/status/10108",
+                    "description": "3e gesprek is gepland (Migrated on 4 May 2023 22:50 UTC)",
+                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "3egesprek",
+                    "id": "10108",
+                    "statusCategory": {
+                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/4",
+                        "id": 4,
+                        "key": "indeterminate",
+                        "colorName": "yellow",
+                        "name": "In Progress"
+                    }
+                },
+                "creator": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                    "accountId": "62cfce93c4c3be001fb586c5",
+                    "emailAddress": "irene.irenema@irenema.nl",
+                    "displayName": "Irene Irenema",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "aggregateprogress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "customfield_10305": "HR Medewerker",
+                "workratio": -1,
+                "created": "2024-03-06T10:22:43.596+0100",
+                "customfield_10092": [],
+                "security": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/securitylevel/10019",
+                    "id": "10019",
+                    "description": "(Migrated on 4 May 2023 22:26 UTC)",
+                    "name": "Default"
+                }
+            }
+        },
+        {
+            "expand": "operations,customfield_10090.properties,versionedRepresentations,editmeta,changelog,customfield_10010.requestTypePractice,customfield_10278.properties,renderedFields,customfield_10089.properties",
+            "id": "84910",
+            "self": "https://avisi.atlassian.net/rest/api/3/issue/84910",
+            "key": "KRR-2",
+            "changelog": {
+                "startAt": 0,
+                "maxResults": 1,
+                "total": 1,
+                "histories": [
+                    {
+                        "id": "1014854",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:53:31.646+0100",
+                        "items": [
+                            {
+                                "field": "Link",
+                                "fieldtype": "jira",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "KRR-8",
+                                "toString": "This issue is adressed by KRR-8"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "fields": {
+                "lastViewed": "no_value",
+                "labels": [],
+                "issuelinks": [
+                    {
+                        "id": "47888",
+                        "self": "https://avisi.atlassian.net/rest/api/3/issueLink/47888",
+                        "type": {
+                            "id": "10009",
+                            "name": "Adressed",
+                            "inward": "is adressed by",
+                            "outward": "adresses",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issueLinkType/10009"
+                        },
+                        "inwardIssue": {
+                            "id": "84917",
+                            "key": "KRR-8",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issue/84917",
+                            "fields": {
+                                "summary": "Frits Fiets",
+                                "status": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/status/1",
+                                    "description": "The issue is open and ready for the assignee to start work on it.",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/open.png",
+                                    "name": "Open",
+                                    "id": "1",
+                                    "statusCategory": {
+                                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/2",
+                                        "id": 2,
+                                        "key": "new",
+                                        "colorName": "blue-gray",
+                                        "name": "To Do"
+                                    }
+                                },
+                                "priority": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                                    "name": "Low",
+                                    "id": "4"
+                                },
+                                "issuetype": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10079",
+                                    "id": "10079",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                                    "name": "Recruit",
+                                    "subtask": false,
+                                    "avatarId": 10300,
+                                    "hierarchyLevel": 0
+                                }
+                            }
+                        }
+                    }
+                ],
+                "assignee": "no_value",
+                "components": [],
+                "subtasks": [],
+                "reporter": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                    "accountId": "62cfce93c4c3be001fb586c5",
+                    "emailAddress": "irene.irenema@irenema.nl",
+                    "displayName": "Irene Irenema",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "progress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "votes": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issue/KRR-2/votes",
+                    "votes": 0,
+                    "hasVoted": false
+                },
+                "issuetype": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10081",
+                    "id": "10081",
+                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                    "name": "Job (Stage)",
+                    "subtask": false,
+                    "avatarId": 10300,
+                    "hierarchyLevel": 0
+                },
+                "project": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/project/10301",
+                    "id": "10301",
+                    "key": "KRR",
+                    "name": "Kopie Recruit RU",
+                    "projectTypeKey": "business",
+                    "simplified": false
+                },
+                "customfield_10031": [],
+                "customfield_10276": "no_value",
+                "customfield_10277": "no_value",
+                "watches": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issue/KRR-2/watchers",
+                    "watchCount": 1,
+                    "isWatching": false
+                },
+                "customfield_10018": {
+                    "hasEpicLinkFieldDependency": false,
+                    "showField": false,
+                    "nonEditableReason": {
+                        "reason": "EPIC_LINK_SHOULD_BE_USED",
+                        "message": "To set an epic as the parent, use the epic link instead"
+                    }
+                },
+                "customfield_10019": "0|x0d1k0:",
+                "updated": "2024-03-06T10:53:31.638+0100",
+                "customfield_10133": "no_value",
+                "customfield_10134": "no_value",
+                "customfield_10247": "no_value",
+                "summary": "Apps: Afstudeerstage Ontwikkeling AI Anablement Service",
+                "customfield_10115": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10133",
+                    "value": "15",
+                    "id": "10133"
+                },
+                "customfield_10116": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10143",
+                    "value": "Hardware",
+                    "id": "10143",
+                    "child": {
+                        "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10145",
+                        "value": "Peripheral",
+                        "id": "10145"
+                    }
+                },
+                "customfield_10117": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10152",
+                    "value": "Incident",
+                    "id": "10152"
+                },
+                "duedate": "no_value",
+                "statuscategorychangedate": "2024-03-06T10:15:04.670+0100",
+                "fixVersions": [],
+                "customfield_10114": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10130",
+                    "value": "ja",
+                    "id": "10130"
+                },
+                "priority": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                    "name": "Low",
+                    "id": "4"
+                },
+                "versions": [],
+                "status": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/status/10111",
+                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Vac Open",
+                    "id": "10111",
+                    "statusCategory": {
+                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/4",
+                        "id": 4,
+                        "key": "indeterminate",
+                        "colorName": "yellow",
+                        "name": "In Progress"
+                    }
+                },
+                "creator": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                    "accountId": "62cfce93c4c3be001fb586c5",
+                    "emailAddress": "irene.irenema@irenema.nl",
+                    "displayName": "Irene Irenema",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "aggregateprogress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "customfield_10305": "no_value",
+                "workratio": -1,
+                "created": "2024-03-06T10:15:04.124+0100",
+                "customfield_10092": [],
+                "security": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/securitylevel/10019",
+                    "id": "10019",
+                    "description": "(Migrated on 4 May 2023 22:26 UTC)",
+                    "name": "Default"
+                }
+            }
+        },
+        {
+            "expand": "operations,customfield_10090.properties,versionedRepresentations,editmeta,changelog,customfield_10010.requestTypePractice,customfield_10278.properties,renderedFields,customfield_10089.properties",
+            "id": "84907",
+            "self": "https://avisi.atlassian.net/rest/api/3/issue/84907",
+            "key": "KRR-1",
+            "changelog": {
+                "startAt": 0,
+                "maxResults": 7,
+                "total": 7,
+                "histories": [
+                    {
+                        "id": "1014915",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T11:00:02.260+0100",
+                        "items": [
+                            {
+                                "field": "Link",
+                                "fieldtype": "jira",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "KRR-12",
+                                "toString": "This issue is adressed by KRR-12"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014906",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:58:34.047+0100",
+                        "items": [
+                            {
+                                "field": "Link",
+                                "fieldtype": "jira",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "KRR-11",
+                                "toString": "This issue is adressed by KRR-11"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014811",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:45:44.651+0100",
+                        "items": [
+                            {
+                                "field": "Link",
+                                "fieldtype": "jira",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "KRR-7",
+                                "toString": "This issue is adressed by KRR-7"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014800",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:44:07.101+0100",
+                        "items": [
+                            {
+                                "field": "Link",
+                                "fieldtype": "jira",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "KRR-6",
+                                "toString": "This issue is adressed by KRR-6"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014785",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:39:00.397+0100",
+                        "items": [
+                            {
+                                "field": "Link",
+                                "fieldtype": "jira",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "KRR-5",
+                                "toString": "This issue is adressed by KRR-5"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014765",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:36:18.215+0100",
+                        "items": [
+                            {
+                                "field": "Link",
+                                "fieldtype": "jira",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "KRR-4",
+                                "toString": "This issue is adressed by KRR-4"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "1014727",
+                        "author": {
+                            "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                            "accountId": "62cfce93c4c3be001fb586c5",
+                            "emailAddress": "irene.irenema@irenema.nl",
+                            "displayName": "Irene Irenema",
+                            "active": true,
+                            "timeZone": "Europe/Amsterdam",
+                            "accountType": "atlassian"
+                        },
+                        "created": "2024-03-06T10:22:43.701+0100",
+                        "items": [
+                            {
+                                "field": "Link",
+                                "fieldtype": "jira",
+                                "from": "no_value",
+                                "fromString": "no_value",
+                                "to": "KRR-3",
+                                "toString": "This issue is adressed by KRR-3"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "fields": {
+                "lastViewed": "no_value",
+                "labels": [],
+                "issuelinks": [
+                    {
+                        "id": "47887",
+                        "self": "https://avisi.atlassian.net/rest/api/3/issueLink/47887",
+                        "type": {
+                            "id": "10009",
+                            "name": "Adressed",
+                            "inward": "is adressed by",
+                            "outward": "adresses",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issueLinkType/10009"
+                        },
+                        "inwardIssue": {
+                            "id": "84916",
+                            "key": "KRR-7",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issue/84916",
+                            "fields": {
+                                "summary": "Elline Evers",
+                                "status": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/status/1",
+                                    "description": "The issue is open and ready for the assignee to start work on it.",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/open.png",
+                                    "name": "Open",
+                                    "id": "1",
+                                    "statusCategory": {
+                                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/2",
+                                        "id": 2,
+                                        "key": "new",
+                                        "colorName": "blue-gray",
+                                        "name": "To Do"
+                                    }
+                                },
+                                "priority": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                                    "name": "Low",
+                                    "id": "4"
+                                },
+                                "issuetype": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10079",
+                                    "id": "10079",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                                    "name": "Recruit",
+                                    "subtask": false,
+                                    "avatarId": 10300,
+                                    "hierarchyLevel": 0
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "id": "47885",
+                        "self": "https://avisi.atlassian.net/rest/api/3/issueLink/47885",
+                        "type": {
+                            "id": "10009",
+                            "name": "Adressed",
+                            "inward": "is adressed by",
+                            "outward": "adresses",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issueLinkType/10009"
+                        },
+                        "inwardIssue": {
+                            "id": "84914",
+                            "key": "KRR-5",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issue/84914",
+                            "fields": {
+                                "summary": "Caroline Claessens",
+                                "status": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/status/10106",
+                                    "description": "1e gesprek is gepland (Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/generic.png",
+                                    "name": "1egesprek",
+                                    "id": "10106",
+                                    "statusCategory": {
+                                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/4",
+                                        "id": 4,
+                                        "key": "indeterminate",
+                                        "colorName": "yellow",
+                                        "name": "In Progress"
+                                    }
+                                },
+                                "priority": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                                    "name": "Low",
+                                    "id": "4"
+                                },
+                                "issuetype": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10079",
+                                    "id": "10079",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                                    "name": "Recruit",
+                                    "subtask": false,
+                                    "avatarId": 10300,
+                                    "hierarchyLevel": 0
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "id": "47884",
+                        "self": "https://avisi.atlassian.net/rest/api/3/issueLink/47884",
+                        "type": {
+                            "id": "10009",
+                            "name": "Adressed",
+                            "inward": "is adressed by",
+                            "outward": "adresses",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issueLinkType/10009"
+                        },
+                        "inwardIssue": {
+                            "id": "84913",
+                            "key": "KRR-4",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issue/84913",
+                            "fields": {
+                                "summary": "Barry Berendsen",
+                                "status": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/status/10107",
+                                    "description": "2e gesprek is gepland (Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/generic.png",
+                                    "name": "2egesprek",
+                                    "id": "10107",
+                                    "statusCategory": {
+                                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/4",
+                                        "id": 4,
+                                        "key": "indeterminate",
+                                        "colorName": "yellow",
+                                        "name": "In Progress"
+                                    }
+                                },
+                                "priority": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                                    "name": "Low",
+                                    "id": "4"
+                                },
+                                "issuetype": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10079",
+                                    "id": "10079",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                                    "name": "Recruit",
+                                    "subtask": false,
+                                    "avatarId": 10300,
+                                    "hierarchyLevel": 0
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "id": "47883",
+                        "self": "https://avisi.atlassian.net/rest/api/3/issueLink/47883",
+                        "type": {
+                            "id": "10009",
+                            "name": "Adressed",
+                            "inward": "is adressed by",
+                            "outward": "adresses",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issueLinkType/10009"
+                        },
+                        "inwardIssue": {
+                            "id": "84912",
+                            "key": "KRR-3",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issue/84912",
+                            "fields": {
+                                "summary": "Annie Arendsen ",
+                                "status": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/status/10108",
+                                    "description": "3e gesprek is gepland (Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/generic.png",
+                                    "name": "3egesprek",
+                                    "id": "10108",
+                                    "statusCategory": {
+                                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/4",
+                                        "id": 4,
+                                        "key": "indeterminate",
+                                        "colorName": "yellow",
+                                        "name": "In Progress"
+                                    }
+                                },
+                                "priority": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                                    "name": "Low",
+                                    "id": "4"
+                                },
+                                "issuetype": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10079",
+                                    "id": "10079",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                                    "name": "Recruit",
+                                    "subtask": false,
+                                    "avatarId": 10300,
+                                    "hierarchyLevel": 0
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "id": "47886",
+                        "self": "https://avisi.atlassian.net/rest/api/3/issueLink/47886",
+                        "type": {
+                            "id": "10009",
+                            "name": "Adressed",
+                            "inward": "is adressed by",
+                            "outward": "adresses",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issueLinkType/10009"
+                        },
+                        "inwardIssue": {
+                            "id": "84915",
+                            "key": "KRR-6",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issue/84915",
+                            "fields": {
+                                "summary": "Dirk Driessen",
+                                "status": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/status/10114",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/generic.png",
+                                    "name": "Beoordeling",
+                                    "id": "10114",
+                                    "statusCategory": {
+                                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/4",
+                                        "id": 4,
+                                        "key": "indeterminate",
+                                        "colorName": "yellow",
+                                        "name": "In Progress"
+                                    }
+                                },
+                                "priority": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                                    "name": "Low",
+                                    "id": "4"
+                                },
+                                "issuetype": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10079",
+                                    "id": "10079",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                                    "name": "Recruit",
+                                    "subtask": false,
+                                    "avatarId": 10300,
+                                    "hierarchyLevel": 0
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "id": "47903",
+                        "self": "https://avisi.atlassian.net/rest/api/3/issueLink/47903",
+                        "type": {
+                            "id": "10009",
+                            "name": "Adressed",
+                            "inward": "is adressed by",
+                            "outward": "adresses",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issueLinkType/10009"
+                        },
+                        "inwardIssue": {
+                            "id": "84931",
+                            "key": "KRR-12",
+                            "self": "https://avisi.atlassian.net/rest/api/3/issue/84931",
+                            "fields": {
+                                "summary": "Henry Hagen ",
+                                "status": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/status/10115",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/generic.png",
+                                    "name": "Closed - Niet op gesprek",
+                                    "id": "10115",
+                                    "statusCategory": {
+                                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/3",
+                                        "id": 3,
+                                        "key": "done",
+                                        "colorName": "green",
+                                        "name": "Done"
+                                    }
+                                },
+                                "priority": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                                    "name": "Low",
+                                    "id": "4"
+                                },
+                                "issuetype": {
+                                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10079",
+                                    "id": "10079",
+                                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                                    "name": "Recruit",
+                                    "subtask": false,
+                                    "avatarId": 10300,
+                                    "hierarchyLevel": 0
+                                }
+                            }
+                        }
+                    }
+                ],
+                "assignee": "no_value",
+                "components": [],
+                "subtasks": [],
+                "reporter": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                    "accountId": "62cfce93c4c3be001fb586c5",
+                    "emailAddress": "irene.irenema@irenema.nl",
+                    "displayName": "Irene Irenema",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "progress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "votes": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issue/KRR-1/votes",
+                    "votes": 0,
+                    "hasVoted": false
+                },
+                "issuetype": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issuetype/10080",
+                    "id": "10080",
+                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                    "iconUrl": "https://avisi.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+                    "name": "Job (Regular)",
+                    "subtask": false,
+                    "avatarId": 10300,
+                    "hierarchyLevel": 0
+                },
+                "customfield_10031": [],
+                "project": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/project/10301",
+                    "id": "10301",
+                    "key": "KRR",
+                    "name": "Kopie Recruit RU",
+                    "projectTypeKey": "business",
+                    "simplified": false
+                },
+                "customfield_10276": "no_value",
+                "customfield_10277": "no_value",
+                "watches": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/issue/KRR-1/watchers",
+                    "watchCount": 1,
+                    "isWatching": false
+                },
+                "customfield_10018": {
+                    "hasEpicLinkFieldDependency": false,
+                    "showField": false,
+                    "nonEditableReason": {
+                        "reason": "EPIC_LINK_SHOULD_BE_USED",
+                        "message": "To set an epic as the parent, use the epic link instead"
+                    }
+                },
+                "customfield_10019": "0|x0d1js:",
+                "updated": "2024-03-06T11:00:02.253+0100",
+                "customfield_10133": "no_value",
+                "customfield_10134": "no_value",
+                "customfield_10247": "no_value",
+                "summary": "Vacature HR Medewerker ",
+                "customfield_10115": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10133",
+                    "value": "15",
+                    "id": "10133"
+                },
+                "customfield_10116": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10143",
+                    "value": "Hardware",
+                    "id": "10143",
+                    "child": {
+                        "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10145",
+                        "value": "Peripheral",
+                        "id": "10145"
+                    }
+                },
+                "customfield_10117": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10152",
+                    "value": "Incident",
+                    "id": "10152"
+                },
+                "duedate": "no_value",
+                "statuscategorychangedate": "2024-03-06T09:55:46.500+0100",
+                "fixVersions": [],
+                "customfield_10114": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/customFieldOption/10130",
+                    "value": "ja",
+                    "id": "10130"
+                },
+                "priority": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/priority/4",
+                    "iconUrl": "https://avisi.atlassian.net/images/icons/priorities/low.svg",
+                    "name": "Low",
+                    "id": "4"
+                },
+                "versions": [],
+                "status": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/status/10111",
+                    "description": "(Migrated on 4 May 2023 22:50 UTC)",
+                    "iconUrl": "https://avisi.atlassian.net/images/icons/statuses/generic.png",
+                    "name": "Vac Open",
+                    "id": "10111",
+                    "statusCategory": {
+                        "self": "https://avisi.atlassian.net/rest/api/3/statuscategory/4",
+                        "id": 4,
+                        "key": "indeterminate",
+                        "colorName": "yellow",
+                        "name": "In Progress"
+                    }
+                },
+                "creator": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/user?accountId=62cfce93c4c3be001fb586c5",
+                    "accountId": "62cfce93c4c3be001fb586c5",
+                    "emailAddress": "irene.irenema@irenema.nl",
+                    "displayName": "Irene Irenema",
+                    "active": true,
+                    "timeZone": "Europe/Amsterdam",
+                    "accountType": "atlassian"
+                },
+                "aggregateprogress": {
+                    "progress": 0,
+                    "total": 0
+                },
+                "customfield_10305": "no_value",
+                "workratio": -1,
+                "created": "2024-03-06T09:55:46.168+0100",
+                "customfield_10092": [],
+                "security": {
+                    "self": "https://avisi.atlassian.net/rest/api/3/securitylevel/10019",
+                    "id": "10019",
+                    "description": "(Migrated on 4 May 2023 22:26 UTC)",
+                    "name": "Default"
+                }
+            }
+        }
+    ]
+}

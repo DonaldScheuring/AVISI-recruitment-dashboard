@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>System Documentation - Requirements</title>
+    <link href="../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>
+        const storage = localStorage.getItem("dokka-dark-mode")
+        if (storage == null) {
+            const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+            if (osDarkSchemePreferred === true) {
+                document.getElementsByTagName("html")[0].classList.add("theme-dark")
+            }
+        } else {
+            const savedDarkMode = JSON.parse(storage)
+            if(savedDarkMode === true) {
+                document.getElementsByTagName("html")[0].classList.add("theme-dark")
+            }
+        }
+    </script>
+    <link href="../styles/style.css" rel="Stylesheet">
+    <link href="../styles/main.css" rel="Stylesheet">
+    <link href="../styles/prism.css" rel="Stylesheet">
+    <link href="../styles/logo-styles.css" rel="Stylesheet">
+    <link href="../styles/font-jb-sans-auto.css" rel="Stylesheet">
+    <script type="text/javascript" src="../scripts/clipboard.js" async="async"></script>
+    <script type="text/javascript" src="../scripts/navigation-loader.js" async="async"></script>
+    <script type="text/javascript" src="../scripts/platform-content-handler.js" async="async"></script>
+    <script type="text/javascript" src="../scripts/main.js" defer="defer"></script>
+    <script type="text/javascript" src="../scripts/prism.js" async="async"></script>
+    <script type="text/javascript" src="../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <nav class="navigation" id="navigation-wrapper">
+        <div class="navigation--inner">
+            <div class="navigation-title">
+                <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+                <div class="library-name">
+                    <a class="library-name--link" href="../index.html">System Documentation</a>
+                </div>
+            </div>
+        </div>
+        <div class="navigation-controls">
+            <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+            <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+        </div>
+    </nav>
+    <div id="container">
+        <div class="sidebar" id="leftColumn">
+            <div class="sidebar--inner" id="sideMenu"></div>
+        </div>
+        <div id="main">
+            <div class="main-content" id="content" pageIds="system_documentation::////PointingToDeclaration//769193423">
+                <div class="breadcrumbs"></div>
+                <div class="cover">
+                    <h1 class="cover"><span><span>Requirements</span></span></h1>
+                </div>
+
+
+
+                <h2>Development Setup</h2>
+                <ul>
+                    <li><strong>Dependencies</strong>: Java, Spring Boot, Apache Camel, Jackson, Hibernate, PostgreSQL.</li>
+                    <li><strong>Environment Variables</strong>: Configure database connection, email credentials, and API keys.</li>
+                    <li><strong>Build and Run</strong>: Use Gradle to build the project and run it with Spring Boot.</li>
+                </ul>
+
+                <h2>Technical Stack</h2>
+                <ul>
+                    <li><strong>Backend</strong>: Kotlin, Spring Boot</li>
+                    <li><strong>Database</strong>: PostgreSQL</li>
+                    <li><strong>Integration</strong>: Apache Camel</li>
+                    <li><strong>Serialization</strong>: Jackson</li>
+                </ul>
+
+                <h2>Configuration Files</h2>
+                <ul>
+                    <li><strong>build.gradle.kts</strong>: Contains the build configuration, including dependencies and plugins.</li>
+                    <li><strong>application.properties</strong>: Contains configuration settings such as database connection details, logging levels, and Jackson JSON configurations.</li>
+                </ul>
+
+                <h2>Checklist For Getting Started</h2>
+                <ul>
+                    <li><strong>Set Up Development Environment</strong>: Install Java and PostgreSQL.</li>
+                    <li><strong>Clone Repository</strong>: Clone the project repository and import it into your IDE.</li>
+                    <li><strong>Configure Database</strong>:
+                        <ul>
+                            <li>Create a PostgreSQL database named <code>recruitdb</code>.</li>
+                            <li>Update the <code>spring.datasource.url</code>, <code>spring.datasource.username</code>, and <code>spring.datasource.password</code> properties in the <code>application.properties</code> file to match your local database settings.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Build and Run</strong>: Build the project and run it with Spring Boot using Gradle.</li>
+                    <li><strong>Set Up Endpoints</strong>:
+                        <ul>
+                            <li><strong>Gmail Route</strong>:
+                                <ul>
+                                    <li>Route: Connects to Gmail to retrieve LinkedIn applications, processes them, and stores the applicant details in the database.</li>
+                                    <li>Configure the Gmail credentials and email processing logic in <code>GmailRoute</code>.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Google Forms Route</strong>:
+                                <ul>
+                                    <li>Route: Reads a Google Sheets file with survey responses, processes it, and stores the statistics in the database.</li>
+                                    <li>Configure the file path and processing logic in <code>GoogleFormsRoute</code>.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Jira Issue Route</strong>:
+                                <ul>
+                                    <li>Route: Processes Jira issue data from a JSON file, updates recruitment stats, and removes duplicate applicants.</li>
+                                    <li>Configure the file path and processing logic in <code>JiraIssueRoute</code>.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><strong>Familiarize with Project Structure</strong>: Review key classes such as
+                        , <a href="../recruitment-dashboard/nl.avisi.recruitment.dashboard.services/-recruitment-stats-service/index.html?query=class%20RecruitmentStatsService(jiraIssueRepository:%20JiraIssueRepository,%20applicantIssueRepository:%20ApplicantIssueRepository,%20internIssueRepository:%20InternIssueRepository,%20vacancyIssueRepository:%20VacancyIssueRepository,%20internApplicationEventRepository:%20InternApplicationEventRepository,%20applicationEventRepository:%20ApplicationEventRepository,%20internVacancyIssueRepository:%20InternVacancyIssueRepository,%20recruitmentStatsRepository:%20RecruitmentStatsRepository,%20hiringEventRepository:%20HiringEventRepository,%20internHiringEventRepository:%20InternHiringEventRepository,%20applicantsStageLogRepository:%20ApplicantsStageLogRepository)">RecruitmentStatsService</a>
+                        , <a href="../recruitment-dashboard/nl.avisi.recruitment.dashboard.util/-jira-issue-deserializer/index.html?query=class%20JiraIssueDeserializer%20:%20JsonDeserializer<JiraIssue>">JiraIssueDeserializer</a>
+                        , <a href="../recruitment-dashboard/nl.avisi.recruitment.dashboard.entities.configuration/-issue-status/index.html?query=enum%20IssueStatus%20:%20Enum<IssueStatus>">IssueStatus</a>
+                        , and <a href="../recruitment-dashboard/nl.avisi.recruitment.dashboard.repositories/-jira-issue-repository/index.html?query=interface%20JiraIssueRepository%20:%20JpaRepository<JiraIssue,%20String>">JiraIssueRepository</a>.</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

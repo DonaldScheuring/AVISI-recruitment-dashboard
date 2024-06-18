@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>System Documentation - Configuration and Deployment</title>
+    <link href="../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>
+        const storage = localStorage.getItem("dokka-dark-mode")
+        if (storage == null) {
+            const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+            if (osDarkSchemePreferred === true) {
+                document.getElementsByTagName("html")[0].classList.add("theme-dark")
+            }
+        } else {
+            const savedDarkMode = JSON.parse(storage)
+            if(savedDarkMode === true) {
+                document.getElementsByTagName("html")[0].classList.add("theme-dark")
+            }
+        }
+    </script>
+    <link href="../styles/style.css" rel="Stylesheet">
+    <link href="../styles/main.css" rel="Stylesheet">
+    <link href="../styles/prism.css" rel="Stylesheet">
+    <link href="../styles/logo-styles.css" rel="Stylesheet">
+    <link href="../styles/font-jb-sans-auto.css" rel="Stylesheet">
+    <script type="text/javascript" src="../scripts/clipboard.js" async="async"></script>
+    <script type="text/javascript" src="../scripts/navigation-loader.js" async="async"></script>
+    <script type="text/javascript" src="../scripts/platform-content-handler.js" async="async"></script>
+    <script type="text/javascript" src="../scripts/main.js" defer="defer"></script>
+    <script type="text/javascript" src="../scripts/prism.js" async="async"></script>
+    <script type="text/javascript" src="../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <nav class="navigation" id="navigation-wrapper">
+        <div class="navigation--inner">
+            <div class="navigation-title">
+                <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+                <div class="library-name">
+                    <a class="library-name--link" href="../index.html">System Documentation</a>
+                </div>
+            </div>
+        </div>
+        <div class="navigation-controls">
+            <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+            <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+        </div>
+    </nav>
+    <div id="container">
+        <div class="sidebar" id="leftColumn">
+            <div class="sidebar--inner" id="sideMenu"></div>
+        </div>
+        <div id="main">
+            <div class="main-content" id="content" pageIds="system_documentation::////PointingToDeclaration//769193423">
+                <div class="breadcrumbs"></div>
+                <div class="cover">
+                    <h1 class="cover"><span><span>Configuration and Deployment</span></span></h1>
+                </div>
+
+                <h2>Configuration</h2>
+
+                <h3>Setting Up the Database</h3>
+                <p>To set up the PostgreSQL database, follow these steps:</p>
+                <ol>
+                    <li>Install PostgreSQL on your local machine.</li>
+                    <li>Create a new database named <code>recruitdb</code>:</li>
+                    <pre><code>CREATE DATABASE recruitdb;</code></pre>
+                    <li>Create a new user and grant all privileges to the database:</li>
+                    <pre><code>
+CREATE USER user1 WITH PASSWORD 'user1';
+GRANT ALL PRIVILEGES ON DATABASE recruitdb TO user1;
+                    </code></pre>
+                    <li>Update the <code>application.properties</code> file with your database credentials:</li>
+                    <pre><code>
+# Database Connection Settings
+spring.datasource.url=jdbc:postgresql://localhost:5432/recruitdb
+spring.datasource.username=user1
+spring.datasource.password=user1
+
+# JPA and Hibernate Configurations
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+                    </code></pre>
+                </ol>
+
+                <h3>Configuring the Endpoints</h3>
+                <p>The application uses Apache Camel routes to handle various data processing tasks. Below are the configurations for the routes:</p>
+
+                <h4>Gmail Route</h4>
+                <p>This route processes LinkedIn applications received via Gmail and stores the applicant details in the database.</p>
+                <pre><code>
+from("imaps://imap.gmail.com?username=your-email@gmail.com&password=your-password&delete=false&unseen=false")
+    .routeId("gmailRoute")
+    .filter { exchange ->
+        val mailMessage = exchange.getIn().getBody(javax.mail.Message::class.java) as MimeMessage
+        val fromAddress = mailMessage.from[0].toString()
+        val subject = mailMessage.subject
+        fromAddress == "jobs-listings@linkedin.com" && subject.startsWith("New application: ")
+    }
+    .process { exchange ->
+        val mailMessage = exchange.getIn().getBody(javax.mail.Message::class.java) as MimeMessage
+        val subject = mailMessage.subject
+        val applicantName = subject.substringAfter(" from ").trim()
+        val applicationDate = LocalDate.now()
+        val linkedInApplicant = LinkedInApplicant(applicantName = applicantName, applicationDate = applicationDate)
+        linkedInApplicantRepository.save(linkedInApplicant)
+    }
+    .end()
+                </code></pre>
+
+                <h4>Google Forms Route</h4>
+                <p>This route reads Google Forms responses from a Google Sheets file, processes them, and stores the statistics in the database.</p>
+                <pre><code>
+from("file:/path/to/google/forms/directory?noop=true")
+    .routeId("googleFormsRoute")
+    .process { exchange ->
+        val file = exchange.getIn().getBody(File::class.java)
+        val workbook = WorkbookFactory.create(file)
+        val sheet = workbook.getSheetAt(0)
+        val questionColumnIndex = sheet.getRow(0).indexOfFirst { it.stringCellValue == "Hoe ben je bij Avisi terecht gekomen?" }
+        var viaNetworkCount = 0
+        var viaSocialMediaCount = 0
+        var viaJobBoardCount = 0
+        var viaSchoolActivityCount = 0
+        var viaInternshipCount = 0
+        var viaRecruitmentAgencyCount = 0
+        var viaSearchEngineCount = 0
+        var otherCount = 0
+        for (row in sheet.drop(1)) {
+            val cellValue = row.getCell(questionColumnIndex).stringCellValue
+            when (cellValue) {
+                "Via via (eigen netwerk)" -> viaNetworkCount++
+                "Via social media (bijvoorbeeld Instagram of LinkedIn)" -> viaSocialMediaCount++
+                "Via jobboard (bijvoorbeeld Indeed)" -> viaJobBoardCount++
+                "Via een bedrijvenmarkt of een andere schoolactiviteit (bijvoorbeeld masterclass, tostitalk, docent)" -> viaSchoolActivityCount++
+                "Via een stage bij Avisi" -> viaInternshipCount++
+                "Via een wervingsbureau (externe recruiter)" -> viaRecruitmentAgencyCount++
+                "Via Google of een andere zoekmachine" -> viaSearchEngineCount++
+                else -> otherCount++
+            }
+        }
+        val formsStats = FormsStats(
+            timestamp = LocalDateTime.now(),
+            viaNetwork = viaNetworkCount,
+            viaSocialMedia = viaSocialMediaCount,
+            viaJobBoard = viaJobBoardCount,
+            viaSchoolActivity = viaSchoolActivityCount,
+            viaInternship = viaInternshipCount,
+            viaRecruitmentAgency = viaRecruitmentAgencyCount,
+            viaSearchEngine = viaSearchEngineCount,
+            other = otherCount
+        )
+        formsStatsRepository.save(formsStats)
+    }
+    .end()
+                                </code></pre>
+
+                <h4>Jira Issue Route</h4>
+                <p>This route processes Jira issue data from a JSON file, updates recruitment stats, and removes duplicate applicants.</p>
+                <pre><code>
+from("file:src/main/resources?fileName=2024-03-12_export_krr.json&noop=true")
+    .unmarshal().json(JsonLibrary.Jackson, JiraIssueWrapper::class.java)
+    .process { exchange ->
+        val wrapper = exchange.getIn().getBody(JiraIssueWrapper::class.java)
+        wrapper.issues.filterNotNull().forEach { issue ->
+            jiraIssueRepository.save(issue)
+        }
+    }
+    .bean(recruitmentStatsService, "update")
+    .bean(duplicateApplicantDeletionService, "deleteDuplicateApplicants")
+    .end()
+                </code></pre>
+
+                <h2>Deployment</h2>
+                <h3>Setup the Database</h3>
+                <p>To set up the PostgreSQL database, follow these steps:</p>
+                <ol>
+                    <li>Install PostgreSQL and create a new database named <code>recruitdb</code>.</li>
+                    <li>Configure the database connection in the <code>application.properties</code> file:</li>
+                    <pre><code>
+# -- DATABASE CONNECTION SETTINGS --
+spring.datasource.url=jdbc:postgresql://localhost:5432/recruitdb
+spring.datasource.username=user1
+spring.datasource.password=user1
+
+# -- JPA AND HIBERNATE CONFIGURATIONS --
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+                    </code></pre>
+                </ol>
+
+                <h3>Setting up the Endpoints</h3>
+                <p>To configure the endpoints for the routes, ensure the following configurations are set up:</p>
+                <h4>Gmail Route</h4>
+                <p>This route processes LinkedIn applications received via Gmail.</p>
+                <pre><code>
+from("imaps://imap.gmail.com?username=your-email@gmail.com&password=your-app-password&delete=false&unseen=false")
+    .routeId("gmailRoute")
+    .filter { exchange ->
+        val mailMessage = exchange.getIn().getBody(javax.mail.Message::class.java) as MimeMessage
+        val fromAddress = mailMessage.from[0].toString()
+        val subject = mailMessage.subject
+        fromAddress == "jobs-listings@linkedin.com" && subject.startsWith("New application: ")
+    }
+    .process { exchange ->
+        val mailMessage = exchange.getIn().getBody(javax.mail.Message::class.java) as MimeMessage
+        val subject = mailMessage.subject
+        val applicantName = subject.substringAfter(" from ").trim()
+        val applicationDate = LocalDate.now()
+        val linkedInApplicant = LinkedInApplicant(applicantName = applicantName, applicationDate = applicationDate)
+        linkedInApplicantRepository.save(linkedInApplicant)
+    }
+    .end()
+                </code></pre>
+
+                <h4>Google Forms Route</h4>
+                <p>This route processes Google Forms responses from a Google Sheets file.</p>
+                <pre><code>
+from("file:/path/to/google/forms/directory?noop=true")
+    .routeId("googleFormsRoute")
+    .process { exchange ->
+        val file = exchange.getIn().getBody(File::class.java)
+        val workbook = WorkbookFactory.create(file)
+        val sheet = workbook.getSheetAt(0)
+        val questionColumnIndex = sheet.getRow(0).indexOfFirst { it.stringCellValue == "Hoe ben je bij Avisi terecht gekomen?" }
+        var viaNetworkCount = 0
+        var viaSocialMediaCount = 0
+        var viaJobBoardCount = 0
+        var viaSchoolActivityCount = 0
+        var viaInternshipCount = 0
+        var viaRecruitmentAgencyCount = 0
+        var viaSearchEngineCount = 0
+        var otherCount = 0
+        for (row in sheet.drop(1)) {
+            val cellValue = row.getCell(questionColumnIndex).stringCellValue
+            when (cellValue) {
+                "Via via (eigen netwerk)" -> viaNetworkCount++
+                "Via social media (bijvoorbeeld Instagram of LinkedIn)" -> viaSocialMediaCount++
+                "Via jobboard (bijvoorbeeld Indeed)" -> viaJobBoardCount++
+                "Via een bedrijvenmarkt of een andere schoolactiviteit (bijvoorbeeld masterclass, tostitalk, docent)" -> viaSchoolActivityCount++
+                "Via een stage bij Avisi" -> viaInternshipCount++
+                "Via een wervingsbureau (externe recruiter)" -> viaRecruitmentAgencyCount++
+                "Via Google of een andere zoekmachine" -> viaSearchEngineCount++
+                else -> otherCount++
+            }
+        }
+        val formsStats = FormsStats(
+            timestamp = LocalDateTime.now(),
+            viaNetwork = viaNetworkCount,
+            viaSocialMedia = viaSocialMediaCount,
+            viaJobBoard = viaJobBoardCount,
+            viaSchoolActivity = viaSchoolActivityCount,
+            viaInternship = viaInternshipCount,
+            viaRecruitmentAgency = viaRecruitmentAgencyCount,
+            viaSearchEngine = viaSearchEngineCount,
+            other = otherCount
+        )
+        formsStatsRepository.save(formsStats)
+    }
+    .end()
+                </code></pre>
+
+                <h4>Jira Issue Route</h4>
+                <p>This route processes Jira issue data from a JSON file, updates recruitment stats, and removes duplicate applicants.</p>
+                <pre><code>
+from("file:src/main/resources?fileName=2024-03-12_export_krr.json&noop=true")
+    .unmarshal().json(JsonLibrary.Jackson, JiraIssueWrapper::class.java)
+    .process { exchange ->
+        val wrapper = exchange.getIn().getBody(JiraIssueWrapper::class.java)
+        wrapper.issues.filterNotNull().forEach { issue ->
+            jiraIssueRepository.save(issue)
+        }
+    }
+    .bean(recruitmentStatsService, "update")
+    .bean(duplicateApplicantDeletionService, "deleteDuplicateApplicants")
+    .end()
+                </code></pre>
+
+                <h3>Deployment Steps</h3>
+                <ol>
+                    <li>Ensure that PostgreSQL is installed and running, and the database is configured correctly.</li>
+                    <li>Ensure that the application is built using Gradle:</li>
+                    <pre><code>./gradlew build</code></pre>
+                    <li>Start the Spring Boot application:</li>
+                    <pre><code>./gradlew bootRun</code></pre>
+                    <li>Verify the application logs to ensure it starts without errors and connects to the database.</li>
+                </ol>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

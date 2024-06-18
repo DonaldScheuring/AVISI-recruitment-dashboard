@@ -1,0 +1,124 @@
+[
+  {
+    "applicantProfile": {
+      "personalInformation": {
+        "firstName": "Bert",
+        "lastName": "Sesam",
+        "phoneNumber": "1113492517",
+        "email": "b.sesam@gehmail.com",
+        "professionalHeadline": "Marketing Enthusiast",
+        "location": "Cleves, North Rhine-Westphalia, Germany",
+        "industry": "Marketing and Advertising"
+      },
+      "experience": [
+        {
+          "title": "Marketing Senior Specialist",
+          "company": "Sumsang",
+          "startDate": "June 2010",
+          "endDate": "Present",
+          "location": "Bonn, North Rhine-Westphalia"
+        },
+        {
+          "title": "Marketing Specialist",
+          "company": "Creativity Surprise Inc.",
+          "startDate": "September 2009",
+          "endDate": "May 2010",
+          "location": "Oslo, Norway"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Agder",
+          "degree": "Master of Science",
+          "fieldOfStudy": "Marketing",
+          "startDate": "January 2007",
+          "endDate": "June 2009",
+          "location": "Agder, Norway"
+        }
+      ],
+      "skills": [
+        "Digital Marketing",
+        "Brand Management",
+        "Social Media Strategy",
+        "Content Creation"
+      ],
+      "jobApplication": {
+        "applicantId": "127.2",
+        "JobPublishedOn": "16/02/2023",
+        "position": "Senior Marketing Manager",
+        "applicationDate": "10/03/2023",
+        "applicationTime": "08:45",
+        "campaign": "2",
+        "references": [
+          {
+            "name": "Borris Johnson",
+            "relationship": "Former Supervisor",
+            "contactInformation": "b.johnson@chef.com"
+          },
+          {
+            "name": "Michael Jordan",
+            "relationship": "Colleague",
+            "contactInformation": "jordan@xmail.com"
+          }
+        ]
+      }
+    }},
+  {
+    "applicantProfile": {
+      "personalInformation": {
+        "firstName": "Gloria",
+        "lastName": "Milano",
+        "phoneNumber": "567319992",
+        "email": "g.milano@yaboo.com",
+        "professionalHeadline": "The only Marketing you will need",
+        "location": "Milan, Lombardy, Italy",
+        "industry": "Marketing and Advertising"
+      },
+      "experience": [
+        {
+          "title": "Marketing Junior Specialist",
+          "company": "Creativo de Solutio",
+          "startDate": "December 2020",
+          "endDate": "Present",
+          "location": "Rome, Lazio"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Bologna",
+          "degree": "Master of Science",
+          "fieldOfStudy": "Marketing",
+          "startDate": "September 2020",
+          "endDate": "June 2017",
+          "location": "Bologna, Emilia-Romagna"
+        }
+      ],
+      "skills": [
+        "Digital Marketing",
+        "Brand Management",
+        "Content Creation",
+        "Fashion Management"
+      ],
+      "jobApplication": {
+        "applicantId": "127.4",
+        "JobPublishedOn": "16/02/2023",
+        "position": "Senior Marketing Manager",
+        "applicationDate": "18/02/2023",
+        "applicationTime": "15:42",
+        "campaign": "2",
+        "references": [
+          {
+            "name": "Rosalia Fabrize",
+            "relationship": "Former Supervisor",
+            "contactInformation": "rosalia.fabrizen@guccci.it"
+          },
+          {
+            "name": "Stafena Collosum",
+            "relationship": "Colleague",
+            "contactInformation": "s.collosum@bigbrain.it"
+          }
+        ]
+      }
+    }
+  }
+]

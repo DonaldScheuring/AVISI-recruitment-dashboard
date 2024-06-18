@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>System Documentation - Data Models</title>
+    <link href="../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>
+        const storage = localStorage.getItem("dokka-dark-mode")
+        if (storage == null) {
+            const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+            if (osDarkSchemePreferred === true) {
+                document.getElementsByTagName("html")[0].classList.add("theme-dark")
+            }
+        } else {
+            const savedDarkMode = JSON.parse(storage)
+            if(savedDarkMode === true) {
+                document.getElementsByTagName("html")[0].classList.add("theme-dark")
+            }
+        }
+    </script>
+    <link href="../styles/style.css" rel="Stylesheet">
+    <link href="../styles/main.css" rel="Stylesheet">
+    <link href="../styles/prism.css" rel="Stylesheet">
+    <link href="../styles/logo-styles.css" rel="Stylesheet">
+    <link href="../styles/font-jb-sans-auto.css" rel="Stylesheet">
+    <script type="text/javascript" src="../scripts/clipboard.js" async="async"></script>
+    <script type="text/javascript" src="../scripts/navigation-loader.js" async="async"></script>
+    <script type="text/javascript" src="../scripts/platform-content-handler.js" async="async"></script>
+    <script type="text/javascript" src="../scripts/main.js" defer="defer"></script>
+    <script type="text/javascript" src="../scripts/prism.js" async="async"></script>
+    <script type="text/javascript" src="../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <nav class="navigation" id="navigation-wrapper">
+        <div class="navigation--inner">
+            <div class="navigation-title">
+                <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+                <div class="library-name">
+                    <a class="library-name--link" href="../index.html">System Documentation</a>
+                </div>
+            </div>
+        </div>
+        <div class="navigation-controls">
+            <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+            <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+        </div>
+    </nav>
+    <div id="container">
+        <div class="sidebar" id="leftColumn">
+            <div class="sidebar--inner" id="sideMenu"></div>
+        </div>
+        <div id="main">
+            <div class="main-content" id="content" pageIds="system_documentation::////PointingToDeclaration//769193423">
+                <div class="breadcrumbs"></div>
+                <div class="cover">
+                    <h1 class="cover"><span><span>Data Models</span></span></h1>
+                </div>
+                <p>This section provides an overview of the data models used in the recruitment dashboard system. The database schema is illustrated in the diagram below:</p>
+                <img src="schema.png" alt="Database Schema" style="width: 50%;">
+
+                <h2>Tables and Their Purpose</h2>
+
+                <h3>jira_issues</h3>
+                <p>This table stores the issues imported from Jira. Each issue has the following attributes:</p>
+                <ul>
+                    <li><strong>id:</strong> The unique identifier for the Jira issue.</li>
+                    <li><strong>issue_type:</strong> The type of issue (e.g., ApplicantIssue, InternIssue).</li>
+                    <li><strong>create_date:</strong> The date when the issue was created.</li>
+                    <li><strong>current_status:</strong> The current status of the issue.</li>
+                </ul>
+
+                <h3>applicant_names</h3>
+                <p>This table stores the names of applicants associated with Jira issues. Each entry has the following attributes:</p>
+                <ul>
+                    <li><strong>id:</strong> The unique identifier for the applicant name record.</li>
+                    <li><strong>name:</strong> The name of the applicant.</li>
+                    <li><strong>jira_issue_id:</strong> The identifier of the related Jira issue.</li>
+                </ul>
+
+                <h3>status_changes</h3>
+                <p>This table tracks the status changes of Jira issues. Each entry has the following attributes:</p>
+                <ul>
+                    <li><strong>id:</strong> The unique identifier for the status change record.</li>
+                    <li><strong>change_date:</strong> The date when the status change occurred.</li>
+                    <li><strong>from_status:</strong> The previous status of the issue.</li>
+                    <li><strong>to_status:</strong> The new status of the issue.</li>
+                    <li><strong>jira_issue_id:</strong> The identifier of the related Jira issue.</li>
+                </ul>
+
+                <h3>applicants_stage_log</h3>
+                <p>This table logs the number of applicants at various stages of the recruitment process. Each entry has the following attributes:</p>
+                <ul>
+                    <li><strong>id:</strong> The unique identifier for the log entry.</li>
+                    <li><strong>log_date:</strong> The date when the log was recorded.</li>
+                    <li><strong>open:</strong> The count of applicants in the 'open' stage.</li>
+                    <li><strong>beoordeling:</strong> The count of applicants in the 'beoordeling' stage.</li>
+                    <li><strong>eerste_gesprek:</strong> The count of applicants in the 'eerste gesprek' stage.</li>
+                    <li><strong>tweede_gesprek:</strong> The count of applicants in the 'tweede gesprek' stage.</li>
+                    <li><strong>derde_gesprek:</strong> The count of applicants in the 'derde gesprek' stage.</li>
+                </ul>
+
+                <h3>linked_in_applicant</h3>
+                <p>This table stores information about applicants who applied via LinkedIn. Each entry has the following attributes:</p>
+                <ul>
+                    <li><strong>id:</strong> The unique identifier for the LinkedIn applicant record.</li>
+                    <li><strong>applicant_name:</strong> The name of the applicant.</li>
+                    <li><strong>application_date:</strong> The date when the application was received.</li>
+                </ul>
+
+                <h3>hiring_events</h3>
+                <p>This table logs the hiring events for applicants. Each entry has the following attributes:</p>
+                <ul>
+                    <li><strong>id:</strong> The unique identifier for the hiring event record.</li>
+                    <li><strong>issue_id:</strong> The identifier of the related Jira issue.</li>
+                    <li><strong>hire_date:</strong> The date when the applicant was hired.</li>
+                </ul>
+
+                <h3>intern_hiring_events</h3>
+                <p>This table logs the hiring events specifically for intern applicants. Each entry has the following attributes:</p>
+                <ul>
+                    <li><strong>id:</strong> The unique identifier for the intern hiring event record.</li>
+                    <li><strong>issue_id:</strong> The identifier of the related Jira issue.</li>
+                    <li><strong>hire_date:</strong> The date when the intern was hired.</li>
+                </ul>
+
+                <h3>application_events</h3>
+                <p>This table logs the application events for applicants. Each entry has the following attributes:</p>
+                <ul>
+                    <li><strong>id:</strong> The unique identifier for the application event record.</li>
+                    <li><strong>issue_id:</strong> The identifier of the related Jira issue.</li>
+                    <li><strong>application_date:</strong> The date when the application was submitted.</li>
+                </ul>
+
+                <h3>intern_application_events</h3>
+                <p>This table logs the application events specifically for intern applicants. Each entry has the following attributes:</p>
+                <ul>
+                    <li><strong>id:</strong> The unique identifier for the intern application event record.</li>
+                    <li><strong>issue_id:</strong> The identifier of the related Jira issue.</li>
+                    <li><strong>application_date:</strong> The date when the intern application was submitted.</li>
+                </ul>
+
+                <h3>forms_stats</h3>
+                <p>This table stores statistics from the Google Forms survey regarding how applicants found out about Avisi. Each entry has the following attributes:</p>
+                <ul>
+                    <li><strong>id:</strong> The unique identifier for the forms stats record.</li>
+                    <li><strong>timestamp:</strong> The date and time when the data was recorded.</li>
+                    <li><strong>via_network:</strong> The count of applicants who found out via network.</li>
+                    <li><strong>via_social_media:</strong> The count of applicants who found out via social media.</li>
+                    <li><strong>via_job_board:</strong> The count of applicants who found out via job board.</li>
+                    <li><strong>via_school_activity:</strong> The count of applicants who found out via school activity.</li>
+                    <li><strong>via_internship:</strong> The count of applicants who found out via internship.</li>
+                    <li><strong>via_recruitment_agency:</strong> The count of applicants who found out via recruitment agency.</li>
+                    <li><strong>via_search_engine:</strong> The count of applicants who found out via search engine.</li>
+                    <li><strong>other:</strong> The count of applicants who selected 'other'.</li>
+                </ul>
+
+                <h3>recruitment_stats</h3>
+                <p>This table stores overall recruitment statistics. Each entry has the following attributes:</p>
+                <ul>
+                    <li><strong>id:</strong> The unique identifier for the recruitment stats record.</li>
+                    <li><strong>stats_date:</strong> The date when the stats were recorded.</li>
+                    <li><strong>avg_time_to_fill:</strong> The average time in days to fill a vacancy.</li>
+                    <li><strong>avg_time_to_hire:</strong> The average time in days to hire an applicant.</li>
+                    <li><strong>current_applicants:</strong> The current number of active applicants.</li>
+                </ul>
+
+                <h3>status_changes</h3>
+                <p>This table tracks the status changes of Jira issues. Each entry has the following attributes:</p>
+                <ul>
+                    <li><strong>id:</strong> The unique identifier for the status change record.</li>
+                    <li><strong>change_date:</strong> The date when the status change occurred.</li>
+                    <li><strong>from_status:</strong> The previous status of the issue.</li>
+                    <li><strong>to_status:</strong> The new status of the issue.</li>
+                    <li><strong>jira_issue_id:</strong> The identifier of the related Jira issue.</li>
+                </ul>
+
+                <h3>applicants_stage_log</h3>
+                <p>This table logs the number of applicants at various stages of the recruitment process. Each entry has the following attributes:</p>
+                <ul>
+                    <li><strong>id:</strong> The unique identifier for the log entry.</li>
+                    <li><strong>log_date:</strong> The date when the log was recorded.</li>
+                    <li><strong>open:</strong> The count of applicants in the 'open' stage.</li>
+                    <li><strong>beoordeling:</strong> The count of applicants in the 'beoordeling' stage.</li>
+                    <li><strong>eerste_gesprek:</strong> The count of applicants in the 'eerste gesprek' stage.</li>
+                    <li><strong>tweede_gesprek:</strong> The count of applicants in the 'tweede gesprek' stage.</li>
+                    <li><strong>derde_gesprek:</strong> The count of applicants in the 'derde gesprek' stage.</li>
+                </ul>
+
+                <h3>linked_in_applicant</h3>
+                <p>This table stores information about applicants who applied via LinkedIn. Each entry has the following attributes:</p>
+                <ul>
+                    <li><strong>id:</strong> The unique identifier for the LinkedIn applicant record.</li>
+                    <li><strong>applicant_name:</strong> The name of the applicant.</li>
+                    <li><strong>application_date:</strong> The date when the application was received.</li>
+                </ul>
+
+                <h3>hiring_events</h3>
+                <p>This table logs the hiring events for applicants. Each entry has the following attributes:</p>
+                <ul>
+                    <li><strong>id:</strong> The unique identifier for the hiring event record.</li>
+                    <li><strong>issue_id:</strong> The identifier of the related Jira issue.</li>
+                    <li><strong>hire_date:</strong> The date when the applicant was hired.</li>
+                </ul>
+
+                <h3>intern_hiring_events</h3>
+                <p>This table logs the hiring events specifically for intern applicants. Each entry has the following attributes:</p>
+                <ul>
+                    <li><strong>id:</strong> The unique identifier for the intern hiring event record.</li>
+                    <li><strong>issue_id:</strong> The identifier of the related Jira issue.</li>
+                    <li><strong>hire_date:</strong> The date when the intern was hired.</li>
+                </ul>
+
+                <h3>application_events</h3>
+                <p>This table logs the application events for applicants. Each entry has the following attributes:</p>
+                <ul>
+                    <li><strong>id:</strong> The unique identifier for the application event record.</li>
+                    <li><strong>issue_id:</strong> The identifier of the related Jira issue.</li>
+                    <li><strong>application_date:</strong> The date when the application was submitted.</li>
+                </ul>
+
+                <h3>intern_application_events</h3>
+                <p>This table logs the application events specifically for intern applicants. Each entry has the following attributes:</p>
+                <ul>
+                    <li><strong>id:</strong> The unique identifier for the intern application event record.</li>
+                    <li><strong>issue_id:</strong> The identifier of the related Jira issue.</li>
+                    <li><strong>application_date:</strong> The date when the intern application was submitted.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

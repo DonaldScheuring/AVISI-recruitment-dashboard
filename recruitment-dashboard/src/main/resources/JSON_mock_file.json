@@ -1,0 +1,799 @@
+[
+  {
+    "applicantProfile": {
+      "personalInformation": {
+        "firstName": "Bert",
+        "lastName": "Sesam",
+        "phoneNumber": "1113492517",
+        "email": "b.sesam@gehmail.com",
+        "professionalHeadline": "Marketing Enthusiast",
+        "location": "Cleves, North Rhine-Westphalia, Germany",
+        "industry": "Marketing and Advertising"
+      },
+      "experience": [
+        {
+          "title": "Marketing Senior Specialist",
+          "company": "Sumsang",
+          "startDate": "June 2010",
+          "endDate": "Present",
+          "location": "Bonn, North Rhine-Westphalia"
+        },
+        {
+          "title": "Marketing Specialist",
+          "company": "Creativity Surprise Inc.",
+          "startDate": "September 2009",
+          "endDate": "May 2010",
+          "location": "Oslo, Norway"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Agder",
+          "degree": "Master of Science",
+          "fieldOfStudy": "Marketing",
+          "startDate": "January 2007",
+          "endDate": "June 2009",
+          "location": "Agder, Norway"
+        }
+      ],
+      "skills": [
+        "Digital Marketing",
+        "Brand Management",
+        "Social Media Strategy",
+        "Content Creation"
+      ],
+      "jobApplication": {
+        "applicantId": "127.2",
+        "JobPublishedOn": "16/02/2023",
+        "position": "Senior Marketing Manager",
+        "applicationDate": "10/03/2023",
+        "applicationTime": "08:45",
+        "campaign": "2",
+        "references": [
+          {
+            "name": "Borris Johnson",
+            "relationship": "Former Supervisor",
+            "contactInformation": "b.johnson@chef.com"
+          },
+          {
+            "name": "Michael Jordan",
+            "relationship": "Colleague",
+            "contactInformation": "jordan@xmail.com"
+          }
+        ]
+      }
+    }},{
+  "applicantProfile": {
+      "personalInformation": {
+        "firstName": "Gunther",
+        "lastName": "Oetker",
+        "phoneNumber": "9876554321",
+        "email": "gunther.oetker@foodmail.com",
+        "professionalHeadline": "Marketing like a Pro",
+        "location": "Nijmegen, Gelderland, The Netherlands",
+        "industry": "Marketing and Advertising"
+      },
+      "experience": [
+        {
+          "title": "Marketing Coordinator",
+          "company": "The MindManipulators",
+          "startDate": "April 1973",
+          "endDate": "Present",
+          "location": "Nijmegen, Gelderland"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Twente",
+          "degree": "Master of Science",
+          "fieldOfStudy": "Marketing",
+          "startDate": "September 1970",
+          "endDate": "June 1972",
+          "location": "Enschede, Overijseln"
+        }
+      ],
+      "skills": [
+        "Brand Management",
+        "Content Creation",
+        "SEO/SEM"
+      ],
+      "jobApplication": {
+        "applicantId": "127.3",
+        "JobPublishedOn": "16/02/2023",
+        "position": "Senior Marketing Manager",
+        "applicationDate": "03/03/2023",
+        "applicationTime": "06:10",
+        "campaign": "2",
+        "references": [
+          {
+            "name": "Howard Wollowutz",
+            "relationship": "Former Supervisor",
+            "contactInformation": "h.wollowutzn@manipulators.com"
+          },
+          {
+            "name": "Mandy Maroone",
+            "relationship": "Colleague",
+            "contactInformation": "mandy.maroonen@wrap.com"
+          },
+          {
+            "name": "Gerd Grabowski",
+            "relationship": "Colleague",
+            "contactInformation": "gerd.grabowski@wubdub.com"
+          }
+        ]
+      }
+    }},{
+  "applicantProfile": {
+      "personalInformation": {
+        "firstName": "Gloria",
+        "lastName": "Milano",
+        "phoneNumber": "567319992",
+        "email": "g.milano@yaboo.com",
+        "professionalHeadline": "The only Marketing you will need",
+        "location": "Milan, Lombardy, Italy",
+        "industry": "Marketing and Advertising"
+      },
+      "experience": [
+        {
+          "title": "Marketing Junior Specialist",
+          "company": "Creativo de Solutio",
+          "startDate": "December 2020",
+          "endDate": "Present",
+          "location": "Rome, Lazio"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Bologna",
+          "degree": "Master of Science",
+          "fieldOfStudy": "Marketing",
+          "startDate": "September 2020",
+          "endDate": "June 2017",
+          "location": "Bologna, Emilia-Romagna"
+        }
+      ],
+      "skills": [
+        "Digital Marketing",
+        "Brand Management",
+        "Content Creation",
+        "Fashion Management"
+      ],
+      "jobApplication": {
+        "applicantId": "127.4",
+        "JobPublishedOn": "16/02/2023",
+        "position": "Senior Marketing Manager",
+        "applicationDate": "18/02/2023",
+        "applicationTime": "15:42",
+        "campaign": "2",
+        "references": [
+          {
+            "name": "Rosalia Fabrize",
+            "relationship": "Former Supervisor",
+            "contactInformation": "rosalia.fabrizen@guccci.it"
+          },
+          {
+            "name": "Stafena Collosum",
+            "relationship": "Colleague",
+            "contactInformation": "s.collosum@bigbrain.it"
+          }
+        ]
+      },
+      "applicantProfile": {
+        "personalInformation": {
+          "firstName": "Freddinand",
+          "lastName": "Zonk",
+          "phoneNumber": "1112131415",
+          "email": "freddy.zonk@business.com",
+          "professionalHeadline": "Experienced Marketing Specialist",
+          "location": "Los Angeles, California, USA",
+          "industry": "Marketing and Advertising"
+        },
+        "experience": [
+          {
+            "title": "Extreme Marketing Coordinator",
+            "company": "AEppel",
+            "startDate": "July 2019",
+            "endDate": "Present",
+            "location": "Los Angeles, CA"
+          }
+        ],
+        "education": [
+          {
+            "school": "Stanford University",
+            "degree": "Master of Science",
+            "fieldOfStudy": "Marketing",
+            "startDate": "February 2017",
+            "endDate": "February 2019",
+            "location": "Stanford, CA"
+          }
+        ],
+        "skills": [
+          "Digital Marketing",
+          "Social Media Strategy",
+          "Content Creation"
+        ],
+        "jobApplication": {
+          "applicantId": "127.5",
+          "JobPublishedOn": "16/02/2023",
+          "position": "Senior Marketing Manager",
+          "applicationDate": "05/03/2023",
+          "applicationTime": "10:01",
+          "campaign": "2",
+          "references": [
+            {
+              "name": "Joshua Brooks",
+              "relationship": "Former Supervisor",
+              "contactInformation": "brooks@aeppel.com"
+            }
+          ]
+        }
+      }
+    }},{
+  "applicantProfile": {
+      "personalInformation": {
+        "firstName": "Beate",
+        "lastName": "Bauer",
+        "phoneNumber": "4445557829",
+        "email": "b.bauer@itunees.com",
+        "professionalHeadline": "The customer is king",
+        "location": "Buxtehude, Lower Saxony, Germany",
+        "industry": "Marketing and Advertising"
+      },
+      "experience": [
+        {
+          "title": "Senior Marketing Specialist",
+          "company": "Bauern iron it out",
+          "startDate": "August 2013",
+          "endDate": "Present",
+          "location": "Buxtehude, Lower Saxony"
+        },
+        {
+          "title": "Junior Marketing Specialist",
+          "company": "WildMinds",
+          "startDate": "July 1999",
+          "endDate": "July 2013",
+          "location": "Boston, MA"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Heidelberg",
+          "degree": "Master of Science",
+          "fieldOfStudy": "Marketing",
+          "startDate": "September 1997",
+          "endDate": "June 1999",
+          "location": "Heidelberg, Baden-Wuerttemberg"
+        }
+      ],
+      "skills": [
+        "Social Media Strategy",
+        "Content Creation",
+        "SEO/SEM"
+      ],
+      "jobApplication": {
+        "applicantId": "127.6",
+        "JobPublishedOn": "16/02/2023",
+        "position": "Senior Marketing Manager",
+        "applicationDate": "19/03/2023",
+        "applicationTime": "14:45",
+        "campaign": "2",
+        "references": [
+          {
+            "name": "Margarethe Meyer",
+            "relationship": "Former Supervisor",
+            "contactInformation": "maggy.meyer@gehmail.com"
+          },
+          {
+            "name": "Udo Bauer",
+            "relationship": "Colleague",
+            "contactInformation": "udo.bauer@yaboo.com"
+          }
+        ]
+      }
+    }},{
+  "applicantProfile": {
+      "personalInformation": {
+        "firstName": "Hanna",
+        "lastName": "Vanilli",
+        "phoneNumber": "3451267985",
+        "email": "h.vanilli@gmnix.com",
+        "professionalHeadline": "I will sweeten your Marketing",
+        "location": "Arnhem, Gerlderland, The Netherlands",
+        "industry": "Marketing and Advertising"
+      },
+      "experience": [
+        {
+          "title": "Marketing Specialist",
+          "company": "Gezellig Inc.",
+          "startDate": "August 2014",
+          "endDate": "Present",
+          "location": "Arnhem, Gerlderland"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Groningen",
+          "degree": "Master of Science",
+          "fieldOfStudy": "Marketing",
+          "startDate": "September 2012",
+          "endDate": "June 2014",
+          "location": "Groningen, Groningen"
+        }
+      ],
+      "skills": [
+        "Digital Marketing",
+        "Social Media Strategy",
+        "Content Creation"
+      ],
+      "jobApplication": {
+        "applicantId": "127.7",
+        "JobPublishedOn": "16/02/2023",
+        "position": "Senior Marketing Manager",
+        "applicationDate": "22/02/2023",
+        "applicationTime": "09:17",
+        "campaign": "2",
+        "references": [
+          {
+            "name": "Jaap van Wrubsen",
+            "relationship": "Former Supervisor",
+            "contactInformation": "jaap.v.wrubsen@example.com"
+          }
+        ]
+      }
+    }},{
+  "applicantProfile": {
+      "personalInformation": {
+        "firstName": "Matthyew",
+        "lastName": "Connorhey",
+        "phoneNumber": "9111121105",
+        "email": "m.connorhey@thelord.com",
+        "professionalHeadline": "Making Marketing great again",
+        "location": "Houston, Texas, USA",
+        "industry": "Marketing and Advertising"
+      },
+      "experience": [
+        {
+          "title": "Senior Marketing Coordinator",
+          "company": "MASA",
+          "startDate": "February 2021",
+          "endDate": "Present",
+          "location": "Houston, TX"
+        },
+        {
+          "title": "Junior Marketing Coordinator",
+          "company": "Cosmic Marketing",
+          "startDate": "September 2005",
+          "endDate": "January 2021",
+          "location": "Houston, TX"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Houston",
+          "degree": "Master of Science",
+          "fieldOfStudy": "Marketing",
+          "startDate": "July 2002",
+          "endDate": "June 2005",
+          "location": "Houston, TX"
+        }
+      ],
+      "skills": [
+        "Digital Marketing",
+        "Brand Management",
+        "Social Media Strategy",
+        "Content Creation",
+        "SEO/SEM"
+      ],
+      "jobApplication": {
+        "applicantId": "127.8",
+        "JobPublishedOn": "16/02/2023",
+        "position": "Senior Marketing Manager",
+        "applicationDate": "20/03/2023",
+        "applicationTime": "14:33",
+        "campaign": "2",
+        "references": [
+          {
+            "name": "Jason Fyle",
+            "relationship": "Colleague",
+            "contactInformation": "jason.fyle@yaboo.com"
+          }
+        ]
+      }
+    }},{
+  "applicantProfile": {
+      "personalInformation": {
+        "firstName": "Allice",
+        "lastName": "Stroopwaffel",
+        "phoneNumber": "1029384756",
+        "email": "allice.stroopwaffel@gntm.com",
+        "professionalHeadline": "Marketing Enthusiast since day 1",
+        "location": "York, Yorkshire, England",
+        "industry": "Marketing and Advertising"
+      },
+      "experience": [
+        {
+          "title": "Junior Marketing Specialist",
+          "company": "Royal Marketing",
+          "startDate": "October 2014",
+          "endDate": "Present",
+          "location": "York, Yorkshire"
+        },
+        {
+          "title": "Junior Marketing Specialist",
+          "company": "The Sheep Company",
+          "startDate": "July 2009",
+          "endDate": "September 2014",
+          "location": "Hastings, South East England"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Oxford",
+          "degree": "Master of Science",
+          "fieldOfStudy": "Marketing",
+          "startDate": "September 2005",
+          "endDate": "June 2009",
+          "location": "Oxford, South East England"
+        }
+      ],
+      "skills": [
+        "Digital Marketing",
+        "Brand Management",
+        "SEO/SEM"
+      ],
+      "jobApplication": {
+        "applicantId": "127.9",
+        "JobPublishedOn": "16/02/2023",
+        "position": "Senior Marketing Manager",
+        "applicationDate": "16/02/2023",
+        "applicationTime": "23:41",
+        "campaign": "2",
+        "references": [
+          {
+            "name": "Stacey Milpford",
+            "relationship": "Former Supervisor",
+            "contactInformation": "stacey.milpford@thequeen.com"
+          },
+          {
+            "name": "Milley Hugh",
+            "relationship": "Colleague",
+            "contactInformation": "m.hugh@gehmail.com"
+          }
+        ]
+      }
+    }},{
+  "applicantProfile": {
+      "personalInformation": {
+        "firstName": "Willem",
+        "lastName": "Alexonder",
+        "phoneNumber": "7470800624",
+        "email": "w.alexonder@theking.com",
+        "professionalHeadline": "Best Product Marketer of the World",
+        "location": "Amsterdam, North Holland, The Netherlands",
+        "industry": "Marketing and Advertising"
+      },
+      "experience": [
+        {
+          "title": "Marketing Coordinator",
+          "company": "Funky Marketing Inc.",
+          "startDate": "April 2000",
+          "endDate": "Present",
+          "location": "Amsterdam, North Holland"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Amsterdam",
+          "degree": "Master of Science",
+          "fieldOfStudy": "Marketing",
+          "startDate": "September 1997",
+          "endDate": "June 1999",
+          "location": "Amsterdam, North Holland"
+        }
+      ],
+      "skills": [
+        "Digital Marketing",
+        "Brand Management",
+        "Social Media Strategy"
+      ],
+      "jobApplication": {
+        "applicantId": "127.10",
+        "JobPublishedOn": "16/02/2023",
+        "position": "Senior Marketing Manager",
+        "applicationDate": "19/03/2023",
+        "applicationTime": "07:19",
+        "campaign": "2",
+        "references": [
+          {
+            "name": "Pim Verstoppen",
+            "relationship": "Former Supervisor",
+            "contactInformation": "p.verstoppen@formeal1.com"
+          },
+          {
+            "name": "Susanna Quvisthout",
+            "relationship": "Colleague",
+            "contactInformation": "susanna.quvisthout@gehmail.com"
+          }
+        ]
+      }
+    }},{
+  "applicantProfile": {
+      "personalInformation": {
+        "firstName": "Geogina",
+        "lastName": "Runaldu",
+        "phoneNumber": "9911228833",
+        "email": "g.runaldu@cr7.com",
+        "professionalHeadline": "Your marketing striker",
+        "location": "Funchal, Madeira, Portugal",
+        "industry": "Marketing and Advertising"
+      },
+      "experience": [
+        {
+          "title": "Marketing Specialist",
+          "company": "Market(F)iFa",
+          "startDate": "July 2015",
+          "endDate": "Present",
+          "location": "Funchal, Madeira"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Lisbon",
+          "degree": "Master of Science",
+          "fieldOfStudy": "Marketing",
+          "startDate": "September 2013",
+          "endDate": "June 2015",
+          "location": "Lisbon, Lisbon"
+        }
+      ],
+      "skills": [
+        "Digital Marketing",
+        "Brand Management",
+        "Social Media Strategy",
+        "Content Creation"
+      ],
+      "jobApplication": {
+        "applicantId": "127.11",
+        "JobPublishedOn": "16/02/2023",
+        "position": "Senior Marketing Manager",
+        "applicationDate": "14/03/2023",
+        "applicationTime": "22:12",
+        "campaign": "2",
+        "references": [
+          {
+            "name": "Christiane Schweinpfeifer",
+            "relationship": "Former Supervisor",
+            "contactInformation": "schweinpfeifer@yaboo.com"
+          }
+        ]
+      }}},{
+  "applicantProfile": {
+        "personalInformation": {
+          "firstName": "Thomas",
+          "lastName": "Twain",
+          "phoneNumber": "1002334127",
+          "email": "thomas.twain@media.com",
+          "professionalHeadline": "The driving force of marketing",
+          "location": "Hamburg, Hamburg, Germany",
+          "industry": "Marketing and Advertising"
+        },
+        "experience": [
+          {
+            "title": "Senior Marketing Specialist",
+            "company": "Jan-Jansens Marketing Inc.",
+            "startDate": "November 2017",
+            "endDate": "Present",
+            "location": "Hamburg, Hamburg"
+          },
+          {
+            "title": "Junior Marketing Specialist",
+            "company": "Cinamonbun is fun Inc.",
+            "startDate": "October 2010",
+            "endDate": "October 2017",
+            "location": "Boston, MA"
+          }
+        ],
+        "education": [
+          {
+            "school": "University of Wuppertal",
+            "degree": "Master of Science",
+            "fieldOfStudy": "Marketing",
+            "startDate": "September 2008",
+            "endDate": "June 2010",
+            "location": "Boston, MA"
+          }
+        ],
+        "skills": [
+          "Digital Marketing",
+          "Social Media Strategy"
+        ],
+        "jobApplication": {
+          "applicantId": "127.12",
+          "JobPublishedOn": "16/02/2023",
+          "position": "Senior Marketing Manager",
+          "applicationDate": "13/03/2023",
+          "applicationTime": "16:32",
+          "campaign": "2",
+          "references": [
+            {
+              "name": "Hauke Haieen",
+              "relationship": "Former Supervisor",
+              "contactInformation": "h.haieen@duneman.com"
+            },
+            {
+              "name": "Peter Schweigert",
+              "relationship": "Colleague",
+              "contactInformation": "schweigert@northstar.com"
+            }
+          ]
+        }
+      }
+    },{
+  "applicantProfile": {
+      "personalInformation": {
+        "firstName": "Melanie",
+        "lastName": "Oaklahy",
+        "phoneNumber": "6578439201",
+        "email": "mel.oaklahy@yaboo.com",
+        "professionalHeadline": "Enthusistic Marketing Specialist",
+        "location": "Arnhem, Gerlderland, The Netherlands",
+        "industry": "Marketing and Advertising"
+      },
+      "experience": [
+        {
+          "title": "Marketing Coordinator",
+          "company": "TheCompanyyy",
+          "startDate": "July 2018",
+          "endDate": "February 2023",
+          "location": "Arnhem, Gerlderland"
+        }
+      ],
+      "education": [
+        {
+          "school": "Radboud University",
+          "degree": "Master of Science",
+          "fieldOfStudy": "Marketing",
+          "startDate": "September 2016",
+          "endDate": "June 2018",
+          "location": "Nijmegen, Gelderland"
+        }
+      ],
+      "skills": [
+        "Digital Marketing",
+        "Content Creation",
+        "SEO/SEM"
+      ],
+      "jobApplication": {
+        "applicantId": "127.13",
+        "JobPublishedOn": "16/02/2023",
+        "position": "Senior Marketing Manager",
+        "applicationDate": "16/03/2023",
+        "applicationTime": "12:03",
+        "campaign": "2",
+        "references": [
+          {
+            "name": "Jennifer Hollands",
+            "relationship": "Former Supervisor",
+            "contactInformation": "jennifer.hollands@webby.nl"
+          }
+        ]
+      }
+    }},{
+  "applicantProfile": {
+      "personalInformation": {
+        "firstName": "John",
+        "lastName": "Trakulta",
+        "phoneNumber": "1000500009",
+        "email": "john.trakulta@gehmail.com",
+        "professionalHeadline": "Experienced Marketing Coordinator",
+        "location": "New York City, New York, USA",
+        "industry": "Marketing and Advertising"
+      },
+      "experience": [
+        {
+          "title": "Senior Marketing Specialist",
+          "company": "Prestigious Marketing",
+          "startDate": "May 2015",
+          "endDate": "Present",
+          "location": "New York City, NY"
+        },
+        {
+          "title": "Junior Marketing Specialist",
+          "company": "Make a Brand Inc.",
+          "startDate": "July 2007",
+          "endDate": "April 2015",
+          "location": "Boston, MA"
+        }
+      ],
+      "education": [
+        {
+          "school": "Boston University",
+          "degree": "Master of Science",
+          "fieldOfStudy": "Marketing",
+          "startDate": "September 205",
+          "endDate": "June 2007",
+          "location": "Boston, MA"
+        }
+      ],
+      "skills": [
+        "Digital Marketing",
+        "Luxurious Brand Management",
+        "Social Media Strategy",
+        "Content Creation",
+        "SEO/SEM"
+      ],
+      "jobApplication": {
+        "applicantId": "127.14",
+        "JobPublishedOn": "16/02/2023",
+        "position": "Senior Marketing Manager",
+        "applicationDate": "01/03/2023",
+        "applicationTime": "11:12",
+        "campaign": "2",
+        "references": [
+          {
+            "name": "Amanda Mirren",
+            "relationship": "Former Supervisor",
+            "contactInformation": "amanda.mirren@prestigious.com"
+          },
+          {
+            "name": "Ford Davis",
+            "relationship": "Colleague",
+            "contactInformation": "davis@businessmarketing.com"
+          }
+        ]
+      }
+    }},{
+  "applicantProfile": {
+      "personalInformation": {
+        "firstName": "Jody",
+        "lastName": "Conelly",
+        "phoneNumber": "7612894350",
+        "email": "j.conelly@webby.com",
+        "professionalHeadline": "Marketing Coordinator with a Passion",
+        "location": "Brussels, Brussels-Capital Region, The Netherlands",
+        "industry": "Marketing and Advertising"
+      },
+      "experience": [
+        {
+          "title": "Marketing Coordinator",
+          "company": "Le FuFu",
+          "startDate": "July 2016",
+          "endDate": "Present",
+          "location": "Brussels, Brussels-Capital Region"
+        }
+      ],
+      "education": [
+        {
+          "school": "Vrije Universiteit Brussel",
+          "degree": "Master of Science",
+          "fieldOfStudy": "Marketing",
+          "startDate": "September 2014",
+          "endDate": "June 2016",
+          "location": "Brussels, Brussels-Capital Region"
+        }
+      ],
+      "skills": [
+        "Digital Marketing",
+        "Brand Management",
+        "Social Media Strategy",
+        "Content Creation",
+        "SEO/SEM"
+      ],
+      "jobApplication": {
+        "applicantId": "127.15",
+        "JobPublishedOn": "16/02/2023",
+        "position": "Senior Marketing Manager",
+        "applicationDate": "08/03/2023",
+        "applicationTime": "20:04",
+        "campaign": "2",
+        "references": [
+          {
+            "name": "Mathieu Kaas",
+            "relationship": "Former Supervisor",
+            "contactInformation": "m.kaas@businessmail.com"
+          }
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>System Documentation - Design Choices</title>
+    <link href="../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>
+        const storage = localStorage.getItem("dokka-dark-mode")
+        if (storage == null) {
+            const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+            if (osDarkSchemePreferred === true) {
+                document.getElementsByTagName("html")[0].classList.add("theme-dark")
+            }
+        } else {
+            const savedDarkMode = JSON.parse(storage)
+            if(savedDarkMode === true) {
+                document.getElementsByTagName("html")[0].classList.add("theme-dark")
+            }
+        }
+    </script>
+    <link href="../styles/style.css" rel="Stylesheet">
+    <link href="../styles/main.css" rel="Stylesheet">
+    <link href="../styles/prism.css" rel="Stylesheet">
+    <link href="../styles/logo-styles.css" rel="Stylesheet">
+    <link href="../styles/font-jb-sans-auto.css" rel="Stylesheet">
+    <script type="text/javascript" src="../scripts/clipboard.js" async="async"></script>
+    <script type="text/javascript" src="../scripts/navigation-loader.js" async="async"></script>
+    <script type="text/javascript" src="../scripts/platform-content-handler.js" async="async"></script>
+    <script type="text/javascript" src="../scripts/main.js" defer="defer"></script>
+    <script type="text/javascript" src="../scripts/prism.js" async="async"></script>
+    <script type="text/javascript" src="../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <nav class="navigation" id="navigation-wrapper">
+        <div class="navigation--inner">
+            <div class="navigation-title">
+                <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+                <div class="library-name">
+                    <a class="library-name--link" href="../index.html">System Documentation</a>
+                </div>
+            </div>
+        </div>
+        <div class="navigation-controls">
+            <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+            <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+        </div>
+    </nav>
+    <div id="container">
+        <div class="sidebar" id="leftColumn">
+            <div class="sidebar--inner" id="sideMenu"></div>
+        </div>
+        <div id="main">
+            <div class="main-content" id="content" pageIds="system_documentation::////PointingToDeclaration//769193423">
+                <div class="breadcrumbs"></div>
+                <div class="cover">
+                    <h1 class="cover"><span><span>Design Choices</span></span></h1>
+                </div>
+
+                <h2>General Flow and Design of the Route</h2>
+                <p>The overall flow of the recruitment dashboard system involves several key steps:</p>
+                <ol>
+                    <li>New Jira tickets in the JSON file returned by the API endpoint are processed.</li>
+                    <li>Recruitment stats are calculated by the <code>RecruitmentStatsService</code>.</li>
+                    <li>Duplicates between Jira and LinkedIn applications are removed by the <code>DuplicateApplicantDeletionService</code>.</li>
+                </ol>
+
+                <h2>Handling Duplicate Applicants</h2>
+                <p>To prevent counting the same applicant multiple times (e.g., from both Jira and LinkedIn applications), the system checks for duplicates and removes entries from the <code>LinkedInApplicants</code> table if a corresponding Jira issue is found. For this purpose we save the names of applicants through LinkedIn in the <code>linked_in_applicant</code> table and the names of applicants through Jira in the <code>applicant_names</code> table and match these against each other in the <code>DuplicateApplicantDeletionService</code>.</p>
+
+                <h2>Single Database Table for Jira Issues</h2>
+                <p>Initially, Jira issues for applicants, interns, and vacancies were stored in a single table. This approach simplifies the database schema but requires additional logic to distinguish between different issue types. Eventually, the design was adjusted to use a discriminator column and subclasses for different issue types to better separate the data and streamline processing.</p>
+
+                <h2>JiraIssue Entity</h2>
+                <p>The <code>JiraIssue</code> class is an abstract base class representing a Jira issue in the database. It serves as the parent class for different types of issues, such as intern, applicant, and vacancy issues. The inheritance strategy is set to single-table inheritance (<code>SINGLE_TABLE</code>), meaning all subtypes are stored in a single database table. The <code>DiscriminatorColumn</code> is used to distinguish between different issue types. A custom deserializer <code>JiraIssueDeserializer</code> is used to convert JSON data into specific subtypes based on the discriminator column.</p>
+
+                <h3>Subtypes of JiraIssue</h3>
+                <p>The <code>JiraIssue</code> entity has several subtypes, including <code>InternIssue</code>, <code>ApplicantIssue</code>, <code>VacancyIssue</code>, and <code>InternVacancyIssue</code>. Using the discriminator column allows for querying different types of Jira issues easily.</p>
+
+                <h2>Calculating Recruitment Stats</h2>
+                <p>The <code>RecruitmentStatsService</code> class is responsible for updating and managing recruitment statistics. This service handles the calculation and logging of various recruitment metrics such as the average time to hire, the current number of active applicants, and the logging of hiring events. Here's an overview of the process:</p>
+
+                <ul>
+                    <li><strong>Average Time to Hire:</strong> The system calculates the average number of days it takes for issues to transition to a hiring status. This involves retrieving relevant status changes, calculating the duration between issue creation and status change, and averaging these durations.</li>
+                    <li><strong>Current Active Applicants:</strong> The system counts the number of Jira issues that are currently in an active status. This is done by querying the database for issues in specific ongoing statuses.</li>
+                    <li><strong>Applicants by Stage:</strong> The system logs the number of applicants at each stage of the recruitment process. This information is saved in the <code>ApplicantsStageLog</code> table.</li>
+                    <li><strong>Average Time to Fill Vacancies:</strong> Similar to the average time to hire, this metric calculates the average duration for issues to reach a status indicating a filled vacancy.</li>
+                </ul>
+
+                <h2>Custom Deserializer for Jira Issues</h2>
+                <p>To handle the complexity of parsing Jira issue data, a custom deserializer is implemented. The <code>JiraIssueDeserializer</code> class is responsible for parsing JSON data into various JiraIssue subtypes, such as <code>InternIssue</code>, <code>ApplicantIssue</code>, <code>InternVacancyIssue</code>, and <code>VacancyIssue</code>, based on the issue type in the JSON input. The deserializer extracts and converts JSON fields into respective entity attributes, including nested structures like the changelog history. It ensures that status changes are accurately captured and associated with their respective JiraIssue instances.</p>
+
+
+                <h3>IssueStatus Enum</h3>
+                <p>The <code>IssueStatus</code> enum represents the status of an issue within the recruitment process. It classifies various stages of the recruitment process by defining specific statuses. Each status is associated with flags indicating whether it represents an open vacancy, an active applicant's process stage, or a successful hire.</p>
+                <p><strong>Vacancy Statuses:</strong></p>
+                <ul>
+                    <li><code>VAC_OPEN</code> - Indicates an open vacancy. <em>(vacFilled = false, activeApplicant = false, successfulHire = false)</em></li>
+                    <li><code>KDD_IN_PROCEDURE</code> - Indicates that a vacancy is in the procedure. <em>(vacFilled = false, activeApplicant = true, successfulHire = false)</em></li>
+                    <li><code>GEEN_KDD_IN_PROCEDURE</code> - Indicates that no vacancy is in the procedure. <em>(vacFilled = false, activeApplicant = true, successfulHire = false)</em></li>
+                    <li><code>CLOSED___NIET_VERVULD</code> - Indicates that a vacancy is closed and not filled. <em>(vacFilled = false, activeApplicant = false, successfulHire = false)</em></li>
+                    <li><code>CLOSED___VERVULD</code> - Indicates that a vacancy is closed and filled successfully. <em>(vacFilled = true, activeApplicant = false, successfulHire = true)</em></li>
+                </ul>
+
+                <p><strong>Applicant/Intern Statuses:</strong></p>
+                <ul>
+                    <li><code>OPEN</code> - Indicates an open applicant process. <em>(vacFilled = false, activeApplicant = true, successfulHire = false)</em></li>
+                    <li><code>BEOORDELING</code> - Indicates that an applicant is under review. <em>(vacFilled = false, activeApplicant = true, successfulHire = false)</em></li>
+                    <li><code>EERSTE_GESPREK</code> - Indicates that an applicant is in the first interview stage. <em>(vacFilled = false, activeApplicant = true, successfulHire = false)</em></li>
+                    <li><code>TWEEDE_GESPREK</code> - Indicates that an applicant is in the second interview stage. <em>(vacFilled = false, activeApplicant = true, successfulHire = false)</em></li>
+                    <li><code>DERDE_GESPREK</code> - Indicates that an applicant is in the third interview stage. <em>(vacFilled = false, activeApplicant = true, successfulHire = false)</em></li>
+                    <li><code>CLOSED___NIET_OP_GESPREK</code> - Indicates that an applicant process is closed and no interview occurred. <em>(vacFilled = false, activeApplicant = false, successfulHire = false)</em></li>
+                    <li><code>CLOSED___NA_1E_GESPREK</code> - Indicates that an applicant process is closed after the first interview. <em>(vacFilled = false, activeApplicant = false, successfulHire = false)</em></li>
+                    <li><code>CLOSED___NA_2E_GESPREK</code> - Indicates that an applicant process is closed after the second interview. <em>(vacFilled = false, activeApplicant = false, successfulHire = false)</em></li>
+                    <li><code>CLOSED___NA_3E_GESPREK</code> - Indicates that an applicant process is closed after the third interview. <em>(vacFilled = false, activeApplicant = false, successfulHire = false)</em></li>
+                    <li><code>CLOSED___HIRED</code> - Indicates that an applicant has been successfully hired. <em>(vacFilled = false, activeApplicant = false, successfulHire = true)</em></li>
+                </ul>
+
+
+                <h2>Interaction with the Database</h2>
+                <p>Interaction with the database is handled via repository interfaces. The most important one is the <code>JiraIssueRepository</code>, which provides methods for retrieving issue data, including average time to a specific status, count of issues by status, and generation of hiring event records based on status changes. Key methods include:</p>
+                <ul>
+                    <li><strong>findStatusChangesForCalculation:</strong> Retrieves all status changes for a given status for <code>ApplicantIssue</code> and <code>VacancyIssue</code> types, filtering out intern-related issues.</li>
+                    <li><strong>averageTimeToStatus:</strong> Calculates the average time it takes for issues to reach a specified status.</li>
+                    <li><strong>countByCurrentStatus:</strong> Counts the number of Jira issues currently in a specified status.</li>
+                    <li><strong>findByCurrentStatus:</strong> Finds all Jira issues currently in a specified status.</li>
+                    <li><strong>countByCurrentStatusIn:</strong> Counts the number of Jira issues for each status in a given collection of statuses.</li>
+                    <li><strong>findHiringEvents:</strong> Finds hiring events for applicants based on status changes indicating a hire.</li>
+                    <li><strong>findInternHiringEvents:</strong> Finds hiring events for interns based on status changes indicating a hire.</li>
+                    <li><strong>findAllApplicantIssues:</strong> Finds all <code>ApplicantIssue</code> objects.</li>
+                    <li><strong>findAllInternIssues:</strong> Finds all <code>InternIssue</code> objects.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

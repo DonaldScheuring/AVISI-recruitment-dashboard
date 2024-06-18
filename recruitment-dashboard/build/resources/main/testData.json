@@ -1,0 +1,27 @@
+[
+  {
+    "id": "JIRA-01",
+    "summary": "Test ticket",
+    "status": "Open"
+  },
+  {
+    "id": "JIRA-02",
+    "summary": "Test ticket",
+    "status": "In Progress"
+  },
+  {
+    "id": "JIRA-03",
+    "summary": "Test ticket",
+    "status": "Resolved"
+  },
+  {
+    "id": "JIRA-04",
+    "summary": "Test ticket",
+    "status": "Open"
+  },
+  {
+    "id": "JIRA-05",
+    "summary": "Test ticket",
+    "status": "In Review"
+  }
+]

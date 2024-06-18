@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+  <title>System Documentation - Dashboard Capabilities</title>
+  <link href="../images/logo-icon.svg" rel="icon" type="image/svg">
+  <script>var pathToRoot = "";</script>
+  <script>document.documentElement.classList.replace("no-js","js");</script>
+  <script>
+    const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+      const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      if (osDarkSchemePreferred === true) {
+        document.getElementsByTagName("html")[0].classList.add("theme-dark")
+      }
+    } else {
+      const savedDarkMode = JSON.parse(storage)
+      if(savedDarkMode === true) {
+        document.getElementsByTagName("html")[0].classList.add("theme-dark")
+      }
+    }
+  </script>
+  <link href="../styles/style.css" rel="Stylesheet">
+  <link href="../styles/main.css" rel="Stylesheet">
+  <link href="../styles/prism.css" rel="Stylesheet">
+  <link href="../styles/logo-styles.css" rel="Stylesheet">
+  <link href="../styles/font-jb-sans-auto.css" rel="Stylesheet">
+  <script type="text/javascript" src="../scripts/clipboard.js" async="async"></script>
+  <script type="text/javascript" src="../scripts/navigation-loader.js" async="async"></script>
+  <script type="text/javascript" src="../scripts/platform-content-handler.js" async="async"></script>
+  <script type="text/javascript" src="../scripts/main.js" defer="defer"></script>
+  <script type="text/javascript" src="../scripts/prism.js" async="async"></script>
+  <script type="text/javascript" src="../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+  <nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+      <div class="navigation-title">
+        <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+        <div class="library-name">
+          <a class="library-name--link" href="../index.html">System Documentation</a>
+        </div>
+      </div>
+    </div>
+    <div class="navigation-controls">
+      <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+      <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+  </nav>
+  <div id="container">
+    <div class="sidebar" id="leftColumn">
+      <div class="sidebar--inner" id="sideMenu"></div>
+    </div>
+    <div id="main">
+      <div class="main-content" id="content" pageIds="system_documentation::////PointingToDeclaration//769193423">
+        <div class="breadcrumbs"></div>
+        <div class="cover">
+          <h1 class="cover"><span><span>Dashboard Capabilities</span></span></h1>
+        </div>
+
+        <p>The recruitment dashboard provides a comprehensive set of capabilities to manage and analyze the recruitment process. Below are the key features and their respective details:</p>
+
+        <h3>Number of Hires in a Certain Period</h3>
+        <p>This capability tracks the number of successful hires within a specified timeframe. The data is derived from the <code>hiring_event</code> table, which logs the issue ID and hire date for each successful hire.</p>
+
+        <h3>Number of Applicants in a Certain Period</h3>
+        <p>The system records the total number of applicants over a given period. This information is stored in the <code>recruitment_stats</code> table, which logs the data each time the route runs, including the timestamp of each log entry.</p>
+
+        <h3>Average Time to Hire</h3>
+        <p>The average time to hire is calculated as the average number of days from the first contact with a candidate to the closing offer. This statistic is also stored in the <code>recruitment_stats</code> table, updated each time the route runs.</p>
+
+        <h3>Time to Fill a Vacancy</h3>
+        <p>This metric represents the average number of days required to fill a vacancy. Although the data for closed vacancy issues is not fully implemented, the <code>recruitment_stats</code> table is prepared to log this information.</p>
+
+        <h3>Number of Applicants in Each Stage</h3>
+        <p>This feature provides a snapshot of the number of applicants at each stage of the recruitment process. The <code>applicants_stage_log</code> table logs the number of applicants by stage, updated each time the route runs, with the respective log date.</p>
+
+        <h3>LinkedIn Applicants</h3>
+        <p>The dashboard shows the number of applicants who applied via LinkedIn. The <code>GmailRoute</code> processes emails from LinkedIn and logs applicant details in the <code>linked_in_applicant</code> table.</p>
+
+        <h3>Origin of Applicants</h3>
+        <p>The origin of applicants is determined through a survey conducted via Google Forms. The <code>GoogleFormsRoute</code> processes survey responses and logs the data in the <code>forms_stats</code> table, providing insights into how applicants found out about Avisi.</p>
+
+        <h3>Number of New Positions Filled Out of Total Vacancies</h3>
+        <p>This capability tracks the number of new positions filled relative to the total vacancies available. This statistic helps in understanding the recruitment efficiency and vacancy fulfillment rate.</p>
+
+        <h3>Status of Vacancies</h3>
+        <p>The dashboard provides an overview of the current status of all vacancies, indicating whether they are open, in review, or closed. This is essential for tracking the progress and status of recruitment efforts.</p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
