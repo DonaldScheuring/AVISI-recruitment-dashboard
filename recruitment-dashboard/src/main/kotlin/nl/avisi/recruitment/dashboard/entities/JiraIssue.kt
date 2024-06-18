@@ -22,6 +22,7 @@ import java.time.LocalDate
  * @property id The unique identifier of the Jira issue, matching the Jira issue ID.
  * @property currentStatus The current status of the Jira issue, mapped to an [IssueStatus] enum.
  * @property createDate The date the issue was created in Jira.
+ * @property extraCost additional cost of the hiring process .
  */
 
 @Entity
@@ -42,6 +43,8 @@ abstract class JiraIssue(
     @Enumerated(EnumType.STRING)
     open var currentStatus: IssueStatus? = null,
 
-    open val createDate: LocalDate? = null
+    open val createDate: LocalDate? = null,
+
+    open var extraCost: String? = null
 )
 
