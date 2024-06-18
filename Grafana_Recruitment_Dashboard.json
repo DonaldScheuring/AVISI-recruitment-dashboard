@@ -266,7 +266,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "WITH VAC_OPEN AS (\r\n Select count(*) as nr_vac_open\r\n from jira_issues \r\n WHERE issue_type = 'VACANCY'\r\n AND current_status = 'VAC_OPEN'\r\n),\r\nKDD_IN_PROCEDURE AS (\r\n Select count(*) as nr_kdd_in_procedure\r\n from jira_issues \r\n WHERE issue_type = 'VACANCY'\r\n AND current_status = 'KDD_IN_PROCEDURE'\r\n),\r\n GEEN_KDD_IN_PROCEDURE AS (\r\n Select count(*) as nr_geen_kdd_in_procedure\r\n from jira_issues \r\n WHERE issue_type = 'VACANCY'\r\n AND current_status = 'GEEN_KDD_IN_PROCEDURE'\r\n),\r\nCLOSED___NIET_VERVULD AS (\r\n Select count(*) as closed_niet_vervuld\r\n from jira_issues \r\n WHERE issue_type = 'VACANCY'\r\n AND current_status = 'CLOSED___NIET_VERVULD'\r\n ),\r\n CLOSED___VERVULD AS (\r\n Select count(*) as closed_vervuld\r\n from jira_issues \r\n WHERE issue_type = 'VACANCY'\r\n AND current_status = 'CLOSED___VERVULD')\r\nSELECT\r\nnr_vac_open,\r\nnr_kdd_in_procedure,\r\nnr_geen_kdd_in_procedure,\r\nclosed_niet_vervuld,\r\nclosed_vervuld\r\nFROM\r\nCLOSED___VERVULD,\r\nCLOSED___NIET_VERVULD,\r\nGEEN_KDD_IN_PROCEDURE,\r\nKDD_IN_PROCEDURE,\r\n VAC_OPEN;",
+          "rawSql": "WITH VAC_OPEN AS (\r\n Select count(*) as nr_vac_open\r\n from jira_issues \r\n WHERE issue_type = 'VACANCY'\r\n AND current_status = 'VAC_OPEN'\r\n),\r\nKDD_IN_PROCEDURE AS (\r\n Select count(*) as nr_kdd_in_procedure\r\n from jira_issues \r\n WHERE issue_type = 'VACANCY'\r\n AND current_status = 'KDD_IN_PROCEDURE'\r\n),\r\n GEEN_KDD_IN_PROCEDURE AS (\r\n Select count(*) as nr_geen_kdd_in_procedure\r\n from jira_issues \r\n WHERE issue_type = 'VACANCY'\r\n AND current_status = 'GEEN_KDD_IN_PROCEDURE'\r\n),\r\nCLOSED___NIET_VERVULD AS (\r\n Select count(*) as closed_niet_vervuld\r\n from jira_issues \r\n WHERE issue_type = 'VACANCY'\r\n AND current_status = 'CLOSED___NIET_VERVULD'\r\n ),\r\n CLOSED___VERVULD AS (\r\n Select count(*) as closed_vervuld\r\n from jira_issues \r\n WHERE issue_type = 'VACANCY'\r\n AND current_status = 'CLOSED___VERVULD')\r\nSELECT\r\nnr_vac_open as \"vacancies open\",\r\nnr_kdd_in_procedure as \"vacancies kdd in procedure\",\r\nnr_geen_kdd_in_procedure as \"vacancies geen kdd in procedure\",\r\nclosed_niet_vervuld as \"vacancies closed (niet vervuld)\",\r\nclosed_vervuld as \"vacancies closed (vervuld)\"\r\nFROM\r\nCLOSED___VERVULD,\r\nCLOSED___NIET_VERVULD,\r\nGEEN_KDD_IN_PROCEDURE,\r\nKDD_IN_PROCEDURE,\r\n VAC_OPEN;",
           "refId": "A",
           "sql": {
             "columns": [
@@ -352,7 +352,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT open, beoordeling, eerste_gesprek, tweede_gesprek,derde_gesprek\nFROM applicants_stage_log\nWHERE log_date = (\n    SELECT MAX(log_date)\n    FROM applicants_stage_log\n);\n",
+          "rawSql": "SELECT open, beoordeling, eerste_gesprek as \"eerste gesprek\", tweede_gesprek as \"tweede gesprek\", derde_gesprek as \"derde gesprek\"\nFROM applicants_stage_log\nWHERE log_date = (\n    SELECT MAX(log_date)\n    FROM applicants_stage_log\n);\n",
           "refId": "A",
           "sql": {
             "columns": [
@@ -520,7 +520,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "WITH total_applicants AS (\n  SELECT\n    COUNT(*) AS total\n  FROM\n    jira_issues\n  WHERE\n    issue_type = 'APPLICANT'\n),\nreached_beoordeling AS (\n  SELECT\n    COUNT(*) AS applicants_in_beoordeling\n  FROM\n    jira_issues\n  WHERE\n    issue_type = 'APPLICANT'\n    AND NOT (current_status = 'OPEN')\n),\nreached_eerste_gesprek AS (\n  SELECT\n    COUNT(*) AS applicants_in_eerste\n  FROM\n    jira_issues\n  WHERE\n    issue_type = 'APPLICANT'\n    AND NOT current_status = 'OPEN'\n    AND NOT current_status = 'BEOORDELING'\n    AND NOT current_status = 'CLOSED___NIET_OP_GESPREK'\n),\nreached_tweede_gesprek AS (\n  SELECT\n    COUNT(*) AS applicants_in_tweede\n  FROM\n    jira_issues\n  WHERE\n    issue_type = 'APPLICANT'\n    AND NOT current_status = 'OPEN'\n    AND NOT current_status = 'BEOORDELING'\n    AND NOT current_status = 'CLOSED___NIET_OP_GESPREK'\n    AND NOT current_status = 'EERSTE_GESPREK'\n    AND NOT current_status = 'CLOSED___NA_EERSTE_GESPREK'\n),\nreached_derde_gesprek AS (\n  SELECT\n    COUNT(*) AS applicants_in_derde\n  FROM\n    jira_issues\n  WHERE\n    issue_type = 'APPLICANT'\n    AND NOT current_status = 'OPEN'\n    AND NOT current_status = 'BEOORDELING'\n    AND NOT current_status = 'CLOSED___NIET_OP_GESPREK'\n    AND NOT current_status = 'EERSTE_GESPREK'\n    AND NOT current_status = 'CLOSED___NA_EERSTE_GESPREK'\n    AND NOT current_status = 'TWEEDE_GESPREK'\n    AND NOT current_status = 'CLOSED___NA_TWEEDE_GESPREK'\n)\nSELECT\n  (applicants_in_beoordeling :: NUMERIC / total * 100) AS percentage_op_beoordeling,\n  (applicants_in_eerste :: NUMERIC / total * 100) AS percentage_op_eerste_gesprek, \n  (applicants_in_tweede :: NUMERIC / total * 100) AS percentage_op_tweede_gesprek,\n  (applicants_in_derde :: NUMERIC / total * 100) AS percentage_op_derde_gesprek\n\nFROM\n  total_applicants,\n  reached_beoordeling,\n  reached_eerste_gesprek,\n  reached_tweede_gesprek,\n  reached_derde_gesprek;",
+          "rawSql": "WITH total_applicants AS (\n  SELECT\n    COUNT(*) AS total\n  FROM\n    jira_issues\n  WHERE\n    issue_type = 'APPLICANT'\n),\nreached_beoordeling AS (\n  SELECT\n    COUNT(*) AS applicants_in_beoordeling\n  FROM\n    jira_issues\n  WHERE\n    issue_type = 'APPLICANT'\n    AND NOT (current_status = 'OPEN')\n),\nreached_eerste_gesprek AS (\n  SELECT\n    COUNT(*) AS applicants_in_eerste\n  FROM\n    jira_issues\n  WHERE\n    issue_type = 'APPLICANT'\n    AND NOT current_status = 'OPEN'\n    AND NOT current_status = 'BEOORDELING'\n    AND NOT current_status = 'CLOSED___NIET_OP_GESPREK'\n),\nreached_tweede_gesprek AS (\n  SELECT\n    COUNT(*) AS applicants_in_tweede\n  FROM\n    jira_issues\n  WHERE\n    issue_type = 'APPLICANT'\n    AND NOT current_status = 'OPEN'\n    AND NOT current_status = 'BEOORDELING'\n    AND NOT current_status = 'CLOSED___NIET_OP_GESPREK'\n    AND NOT current_status = 'EERSTE_GESPREK'\n    AND NOT current_status = 'CLOSED___NA_EERSTE_GESPREK'\n),\nreached_derde_gesprek AS (\n  SELECT\n    COUNT(*) AS applicants_in_derde\n  FROM\n    jira_issues\n  WHERE\n    issue_type = 'APPLICANT'\n    AND NOT current_status = 'OPEN'\n    AND NOT current_status = 'BEOORDELING'\n    AND NOT current_status = 'CLOSED___NIET_OP_GESPREK'\n    AND NOT current_status = 'EERSTE_GESPREK'\n    AND NOT current_status = 'CLOSED___NA_EERSTE_GESPREK'\n    AND NOT current_status = 'TWEEDE_GESPREK'\n    AND NOT current_status = 'CLOSED___NA_TWEEDE_GESPREK'\n)\nSELECT\n  (applicants_in_beoordeling :: NUMERIC / total * 100) AS \"percentage op beoordeling\",\n  (applicants_in_eerste :: NUMERIC / total * 100) AS \"percentage op eerste gesprek\", \n  (applicants_in_tweede :: NUMERIC / total * 100) AS \"percentage op tweede gesprek\",\n  (applicants_in_derde :: NUMERIC / total * 100) AS \"percentage op derde gesprek\"\n\nFROM\n  total_applicants,\n  reached_beoordeling,\n  reached_eerste_gesprek,\n  reached_tweede_gesprek,\n  reached_derde_gesprek;",
           "refId": "A",
           "sql": {
             "columns": [
@@ -842,7 +842,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT\r\n  other,\r\n  via_internship,\r\n  via_job_board,\r\n  via_network,\r\n  via_recruitment_agency,\r\n  via_school_activity,\r\n  via_search_engine,\r\n  via_social_media\r\nFROM\r\n  forms_stats\r\nWHERE \"timestamp\"= (\r\n    SELECT MAX(\"timestamp\")\r\n    FROM forms_stats\r\n);\r\n",
+          "rawSql": "SELECT\r\n  other,\r\n  via_internship as \"via internship\",\r\n  via_job_board as \"via job board\",\r\n  via_network as \"via network\",\r\n  via_recruitment_agency as \"via recruitment agency\",\r\n  via_school_activity as \"via school activity\",\r\n  via_search_engine as \"via search engine\",\r\n  via_social_media as \"via social media\"\r\nFROM\r\n  forms_stats\r\nWHERE \"timestamp\"= (\r\n    SELECT MAX(\"timestamp\")\r\n    FROM forms_stats\r\n);\r\n",
           "refId": "A",
           "sql": {
             "columns": [
@@ -1020,7 +1020,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT\r\n  open,\r\n  beoordeling,\r\n  eerste_gesprek,\r\n  tweede_gesprek,\r\n  derde_gesprek,\r\n  log_date\r\nFROM\r\n  applicants_stage_log\r\nORDER BY\r\n  log_date",
+          "rawSql": "SELECT\r\n  open,\r\n  beoordeling,\r\n  eerste_gesprek as \"eerste gesprek\",\r\n  tweede_gesprek as \"tweede gesprek\",\r\n  derde_gesprek as \"derde gesprek\",\r\n  log_date\r\nFROM\r\n  applicants_stage_log\r\nORDER BY\r\n  log_date",
           "refId": "A",
           "sql": {
             "columns": [
@@ -1279,6 +1279,135 @@
         "type": "grafana-postgresql-datasource",
         "uid": "c9702c9e-309a-42f2-aa94-a268acafa5aa"
       },
+      "description": "Shows the extra costs over time",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "blue",
+            "mode": "shades"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unitScale": true
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 6,
+        "y": 48
+      },
+      "id": 21,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-postgresql-datasource",
+            "uid": "c9702c9e-309a-42f2-aa94-a268acafa5aa"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT create_date, SUM(extra_cost) as \"Extra cost\"\r\nFROM jira_issues \r\nwhere extra_cost is NOT null \r\ngroup by create_date;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [
+                  {
+                    "name": "create_date",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              },
+              {
+                "parameters": [
+                  {
+                    "name": "extra_cost",
+                    "type": "functionParameter"
+                  }
+                ],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": "jira_issues"
+        }
+      ],
+      "title": "Extra costs",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "grafana-postgresql-datasource",
+        "uid": "c9702c9e-309a-42f2-aa94-a268acafa5aa"
+      },
       "description": "Number of applications by interns in each month, over last 12 months",
       "fieldConfig": {
         "defaults": {
@@ -1326,7 +1455,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 48
+        "y": 56
       },
       "id": 17,
       "options": {
@@ -1440,7 +1569,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 48
+        "y": 56
       },
       "id": 15,
       "options": {
@@ -1498,22 +1627,22 @@
       "type": "barchart"
     }
   ],
-  "refresh": "",
+  "refresh": false,
   "schemaVersion": 39,
   "tags": [],
   "templating": {
     "list": []
   },
   "time": {
-    "from": "2024-04-06T15:00:31.431Z",
-    "to": "2024-06-05T15:00:31.431Z"
+    "from": "2023-05-22T00:00:00.000Z",
+    "to": "2024-04-06T00:00:00.000Z"
   },
   "timepicker": {
     "hidden": false
   },
   "timezone": "",
-  "title": "Recruitment Dashboard",
+  "title": "Recruitment Dashboard test",
   "uid": "f1c5a828-77b9-4b26-b339-7d3c8508fc74",
-  "version": 2,
+  "version": 5,
   "weekStart": ""
 }
