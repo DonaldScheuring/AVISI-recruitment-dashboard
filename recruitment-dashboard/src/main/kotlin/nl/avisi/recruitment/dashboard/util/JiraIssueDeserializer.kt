@@ -41,6 +41,8 @@ class JiraIssueDeserializer : JsonDeserializer<JiraIssue>() {
         val date = LocalDate.parse(timeString.substring(0, 10), DateTimeFormatter.ISO_LOCAL_DATE)
         val name = ApplicantName(rootNode.path("fields").path("summary").asText(null))
 
+        val extraCost = null // fill in path to extra cost here
+
         // root node for change log of the jira issue which contains the histories list
         val changelogNode = rootNode.path("changelog").path("histories")
         val statusChanges = mutableListOf<StatusChange>()
@@ -48,10 +50,10 @@ class JiraIssueDeserializer : JsonDeserializer<JiraIssue>() {
         // Determine the appropriate sub-class based on the issue type
         val jiraIssue: JiraIssue = when (issueType) {
             // id for InternIssue needs to be added!!!
-            "00000" -> InternIssue(id, status, date, statusChanges, name)
-            "10080" -> VacancyIssue(id, status, date, statusChanges)
-            "10079" -> ApplicantIssue(id, status, date, statusChanges, name)
-            "10081" -> InternVacancyIssue(id, status, date, statusChanges)
+            "00000" -> InternIssue(id, status, date, extraCost, statusChanges, name)
+            "10080" -> VacancyIssue(id, status, date, extraCost, statusChanges)
+            "10079" -> ApplicantIssue(id, status, date, extraCost, statusChanges, name)
+            "10081" -> InternVacancyIssue(id, status, date, extraCost, statusChanges)
 
             // handling unknown issue types
             // right now the deserializer returns null when encountering an unknown issue id
