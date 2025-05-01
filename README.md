@@ -2,11 +2,6 @@
 
 Our project is a dashboard for the Human Resources department of the company AVISI and has "recruitment-dashboard" as its root directory. 
 
-## ! TO-DO !
-
-In util > JiraIssueDeserializer in line 53, issue id corresponding to InternIssue needs to be adjusted to correspond to the id of intern issues in the json file returned by the Jira API endpoint.
-
-Aso in In util > JiraIssueDeserializer in line 44, the path to the extraCost field needs to be specified.
 
 ### Generating an App Password for Gmail Integration
 
